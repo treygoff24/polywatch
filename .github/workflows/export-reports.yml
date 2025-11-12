@@ -50,20 +50,27 @@ jobs:
             --output-dir docs/reports \
             --index-file docs/reports/index.json
 
-      - name: Commit updated reports
-        id: commit
+      - name: Publish reports branch
         run: |
-          if git diff --quiet docs/reports; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/reports
-          git commit -m "ci: refresh reports"
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Push report snapshots
-        if: steps.commit.outputs.changed == 'true'
-        run: |
-          git push origin HEAD:reports
+          git fetch origin reports || true
+          rm -rf reports-branch
+          if git ls-remote --exit-code origin reports >/dev/null 2>&1; then
+            git worktree add reports-branch origin/reports
+          else
+            git worktree add -B reports reports-branch
+          fi
+          mkdir -p reports-branch/docs/reports
+          rsync -a --delete docs/reports/ reports-branch/docs/reports/
+          cd reports-branch
+          if git status --porcelain | grep -q .; then
+            git add .
+            git commit -m "ci: refresh reports"
+            git push origin HEAD:reports
+          else
+            echo "No report changes detected"
+          fi
+          cd ..
+          git worktree remove reports-branch
