@@ -1,0 +1,357 @@
+{
+  "event": {
+    "title": "Honduras Presidential Election",
+    "slug": "honduras-presidential-election",
+    "id": 123456
+  },
+  "score": 62.4,
+  "label": "suspicious",
+  "heuristics": [
+    {
+      "name": "wallet_concentration",
+      "triggered": true,
+      "intensity": 0.82,
+      "summary": "wallet concentration top1=68% trades (64% notional), top3=91%"
+    },
+    {
+      "name": "min_size_spam",
+      "triggered": true,
+      "intensity": 0.78,
+      "summary": "min-size trades share=79% over 412 trades"
+    },
+    {
+      "name": "timing_regular",
+      "triggered": false,
+      "intensity": 0.24,
+      "summary": "timing CV=0.42, z-score=2.6"
+    },
+    {
+      "name": "ping_pong",
+      "triggered": true,
+      "intensity": 0.44,
+      "summary": "ping-pong wallets share=44% of trades"
+    },
+    {
+      "name": "round_trips",
+      "triggered": false,
+      "intensity": 0.18,
+      "summary": "round-trip wallets share=18% of trades"
+    },
+    {
+      "name": "price_whips",
+      "triggered": false,
+      "intensity": 0.33,
+      "summary": "price whips detected=1 (peak in Candidate B)"
+    }
+  ],
+  "outcomes": [
+    {
+      "label": "Candidate A (Yes)",
+      "conditionId": "cond-001",
+      "outcomeIndex": 0,
+      "score": 64.9,
+      "labelText": "watch",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": true,
+          "intensity": 0.7,
+          "summary": "wallet concentration top1=61% trades (52% notional), top3=86%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": true,
+          "intensity": 0.81,
+          "summary": "min-size trades share=81% over 196 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.21,
+          "summary": "timing CV=0.39, z-score=2.9"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": true,
+          "intensity": 0.43,
+          "summary": "ping-pong wallets share=43% of trades"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.17,
+          "summary": "round-trip wallets share=17% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.25,
+          "summary": "price whips detected=1 (peak in Candidate A)"
+        }
+      ]
+    },
+    {
+      "label": "Candidate B (Yes)",
+      "conditionId": "cond-001",
+      "outcomeIndex": 1,
+      "score": 57.3,
+      "labelText": "watch",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": true,
+          "intensity": 0.66,
+          "summary": "wallet concentration top1=58% trades (49% notional), top3=87%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": true,
+          "intensity": 0.74,
+          "summary": "min-size trades share=77% over 144 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.18,
+          "summary": "timing CV=0.45, z-score=2.4"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": true,
+          "intensity": 0.39,
+          "summary": "ping-pong wallets share=39% of trades"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.14,
+          "summary": "round-trip wallets share=14% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.38,
+          "summary": "price whips detected=1 (peak in Candidate B)"
+        }
+      ]
+    },
+    {
+      "label": "Candidate C (Yes)",
+      "conditionId": "cond-001",
+      "outcomeIndex": 2,
+      "score": 23.5,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.32,
+          "summary": "wallet concentration top1=32% trades (28% notional), top3=64%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.55,
+          "summary": "min-size trades share=55% over 72 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.16,
+          "summary": "timing CV=0.48, z-score=1.7"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.22,
+          "summary": "ping-pong wallets share=22% of trades"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.09,
+          "summary": "round-trip wallets share=9% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.2,
+          "summary": "price whips detected=0"
+        }
+      ]
+    }
+  ],
+  "analytics": {
+    "marketOverview": {
+      "totalTrades": 412,
+      "totalSize": 21678.0,
+      "totalNotional": 9845.32,
+      "averageSize": 52.62,
+      "averageNotional": 23.9,
+      "walletCoverage": {
+        "uniqueWallets": 38,
+        "missingWallets": 12,
+        "missingShare": 0.029
+      },
+      "topWallets": {
+        "tradesTop1": 0.68,
+        "tradesTop3": 0.91,
+        "notionalTop1": 0.64,
+        "notionalTop3": 0.89
+      },
+      "largestBySize": {
+        "size": 780.0,
+        "price": 0.54,
+        "wallet": "0xfeedbead",
+        "timestamp": 1712751112
+      },
+      "largestByNotional": {
+        "notional": 920.5,
+        "size": 410.0,
+        "price": 0.56,
+        "wallet": "0xdeadbeef",
+        "timestamp": 1712751934
+      }
+    },
+    "outcomes": [
+      {
+        "label": "Candidate A (Yes)",
+        "conditionId": "cond-001",
+        "outcomeIndex": 0,
+        "tradeCount": 196,
+        "notional": 4567.12,
+        "volumeShare": 0.464,
+        "vwap": 0.47,
+        "lastPrice": 0.48,
+        "score": 64.9,
+        "labelText": "watch",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": true,
+            "intensity": 0.7,
+            "summary": "wallet concentration top1=61% trades (52% notional), top3=86%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": true,
+            "intensity": 0.81,
+            "summary": "min-size trades share=81% over 196 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.21,
+            "summary": "timing CV=0.39, z-score=2.9"
+          }
+        ]
+      },
+      {
+        "label": "Candidate B (Yes)",
+        "conditionId": "cond-001",
+        "outcomeIndex": 1,
+        "tradeCount": 144,
+        "notional": 3610.4,
+        "volumeShare": 0.367,
+        "vwap": 0.52,
+        "lastPrice": 0.51,
+        "score": 57.3,
+        "labelText": "watch",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": true,
+            "intensity": 0.66,
+            "summary": "wallet concentration top1=58% trades (49% notional), top3=87%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": true,
+            "intensity": 0.74,
+            "summary": "min-size trades share=77% over 144 trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": true,
+            "intensity": 0.39,
+            "summary": "ping-pong wallets share=39% of trades"
+          }
+        ]
+      },
+      {
+        "label": "Candidate C (Yes)",
+        "conditionId": "cond-001",
+        "outcomeIndex": 2,
+        "tradeCount": 72,
+        "notional": 1667.8,
+        "volumeShare": 0.169,
+        "vwap": 0.28,
+        "lastPrice": 0.3,
+        "score": 23.5,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.32,
+            "summary": "wallet concentration top1=32% trades (28% notional), top3=64%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.55,
+            "summary": "min-size trades share=55% over 72 trades"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.2,
+            "summary": "price whips detected=0"
+          }
+        ]
+      }
+    ],
+    "timeseries": {
+      "perMinute": [
+        {
+          "timestamp": 1712749200,
+          "iso": "2024-04-10T00:00:00+00:00",
+          "tradeCount": 4,
+          "vwap": 0.48
+        },
+        {
+          "timestamp": 1712749260,
+          "iso": "2024-04-10T00:01:00+00:00",
+          "tradeCount": 7,
+          "vwap": 0.46
+        },
+        {
+          "timestamp": 1712749320,
+          "iso": "2024-04-10T00:02:00+00:00",
+          "tradeCount": 6,
+          "vwap": 0.5
+        },
+        {
+          "timestamp": 1712749380,
+          "iso": "2024-04-10T00:03:00+00:00",
+          "tradeCount": 5,
+          "vwap": 0.52
+        },
+        {
+          "timestamp": 1712749440,
+          "iso": "2024-04-10T00:04:00+00:00",
+          "tradeCount": 8,
+          "vwap": 0.51
+        },
+        {
+          "timestamp": 1712749500,
+          "iso": "2024-04-10T00:05:00+00:00",
+          "tradeCount": 10,
+          "vwap": 0.53
+        }
+      ]
+    }
+  },
+  "lookbackSeconds": 86400
+}
+

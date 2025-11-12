@@ -25,6 +25,36 @@ python -m polywatch.cli \
   --log-level INFO
 ```
 
+## Exporting Cached Reports
+
+The frontend consumes cached JSON built with the exporter script. Generate snapshots for one or more slugs:
+
+```bash
+python scripts/export_report.py \
+  --slug honduras-presidential-election \
+  --lookback 24h \
+  --output-dir docs/reports \
+  --index-file docs/reports/index.json
+```
+
+The exporter reuses the CLI’s client, honours the same rate-limit defaults (5k rows/page, 0.3 s sleep) and writes both `docs/reports/<slug>.json` and a searchable `docs/reports/index.json`. Add additional `--slug` flags to snapshot multiple markets in one run.
+
+A GitHub Actions workflow (`.github/workflows/export-reports.yml`) refreshes these files every 15 minutes and pushes them to a `reports` branch. Adjust `POLYWATCH_SLUGS`, `POLYWATCH_LOOKBACK`, or the sleep/page parameters in the workflow environment to widen coverage without breaking Polymarket’s 75 req/10 s budget.
+
+## Cyberpunk Web Frontend
+
+The cyberpunk dashboard lives in `frontend/` (Next.js 15 App Router + Tailwind). It renders the cached reports with hero cards, market overview tiles, outcome tables, sparklines, and a fuzzy search launcher.
+
+```bash
+cd frontend
+npm install
+REPORTS_FILE_ROOT=../docs/reports npm run dev
+```
+
+- `REPORTS_FILE_ROOT` (default: `../docs/reports`) points the server to local JSON. In production, set `REPORTS_BASE_URL` (and `NEXT_PUBLIC_REPORTS_BASE_URL` for client-side fetches) to the hosted snapshots, e.g. a `reports` branch served over GitHub Pages.
+- `npm run build` performs an ISR-ready production build, `npm run start` serves it.
+- `npm run test:e2e` executes Playwright smoke tests against the dashboard, verifying the featured report renders and the search flow drills into `/markets/[slug]`.
+
 ### Key Flags
 
 | Flag | Description |
