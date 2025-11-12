@@ -3,10 +3,15 @@ from __future__ import annotations
 import math
 from collections import Counter, defaultdict
 from statistics import median
-from typing import Callable, DefaultDict, List, Sequence
+from typing import Callable, DefaultDict, List, Optional, Sequence
 
 from .models import HeuristicResult, Trade
-from .utils import rolling_minutes, top_k_trade_share, vwap_by_minute
+from .utils import (
+    group_trades_by_outcome,
+    rolling_minutes,
+    top_k_trade_share,
+    vwap_by_minute,
+)
 
 
 def _share_top(values: Sequence[int], top: int, total: int) -> float:
@@ -20,22 +25,30 @@ def _format_pct(value: float) -> str:
 
 
 def wallet_concentration(trades: Sequence[Trade]) -> HeuristicResult:
-    total = len(trades)
+    total = 0
     counts: Counter[str] = Counter()
     notionals: DefaultDict[str, float] = defaultdict(float)
+    missing = 0
     for trade in trades:
-        counts[trade.proxy_wallet] += 1
-        notionals[trade.proxy_wallet] += trade.size * trade.price
-    if not counts:
-        return HeuristicResult("wallet_concentration", False, 0.0, "insufficient trades")
+        wallet = trade.proxy_wallet
+        if not wallet:
+            missing += 1
+            continue
+        counts[wallet] += 1
+        notionals[wallet] += trade.size * trade.price
+        total += 1
+    if total == 0:
+        summary = "wallet data missing for all trades" if missing else "insufficient trades"
+        return HeuristicResult("wallet_concentration", False, 0.0, summary)
     top1_ct = max(counts.values()) / total
     top1_notional = max(notionals.values()) / max(1e-9, sum(notionals.values()))
     top3_ct = _share_top(list(counts.values()), 3, total)
     triggered = (top1_ct >= 0.60 and top1_notional >= 0.40) or (top3_ct >= 0.85)
     intensity = min(1.0, max(top1_ct, top3_ct))
+    missing_clause = f"; {missing} trades missing wallet" if missing else ""
     summary = (
         f"wallet concentration top1={_format_pct(top1_ct)} trades ({_format_pct(top1_notional)} notional), "
-        f"top3={_format_pct(top3_ct)}"
+        f"top3={_format_pct(top3_ct)}{missing_clause}"
     )
     return HeuristicResult("wallet_concentration", triggered, intensity, summary)
 
@@ -107,7 +120,10 @@ def ping_pong_sequences(trades: Sequence[Trade]) -> HeuristicResult:
         return HeuristicResult("ping_pong", False, 0.0, "small sample")
     by_wallet: DefaultDict[str, List[Trade]] = defaultdict(list)
     for trade in trades:
-        by_wallet[trade.proxy_wallet].append(trade)
+        wallet = trade.proxy_wallet
+        if not wallet:
+            continue
+        by_wallet[wallet].append(trade)
     marked_wallets = set()
     for wallet, seq in by_wallet.items():
         seq.sort(key=lambda t: t.timestamp)
@@ -147,7 +163,10 @@ def round_trips(trades: Sequence[Trade], tick_lookup: Callable[[Trade], float]) 
         return HeuristicResult("round_trips", False, 0.0, "small sample")
     by_wallet: DefaultDict[str, List[Trade]] = defaultdict(list)
     for trade in trades:
-        by_wallet[trade.proxy_wallet].append(trade)
+        wallet = trade.proxy_wallet
+        if not wallet:
+            continue
+        by_wallet[wallet].append(trade)
     marked_wallets = set()
     for wallet, seq in by_wallet.items():
         seq.sort(key=lambda t: t.timestamp)
@@ -178,10 +197,43 @@ def round_trips(trades: Sequence[Trade], tick_lookup: Callable[[Trade], float]) 
 def price_whips(trades: Sequence[Trade]) -> HeuristicResult:
     if len(trades) < 20:
         return HeuristicResult("price_whips", False, 0.0, "small sample")
+
+    def _label(condition_id: str, outcome_index: Optional[int], outcome: Optional[str]) -> str:
+        if outcome:
+            return outcome
+        if outcome_index is None:
+            return condition_id
+        return f"{condition_id}#{outcome_index}"
+
+    grouped = group_trades_by_outcome(trades)
+    if not grouped:
+        return HeuristicResult("price_whips", False, 0.0, "no minute bars")
+
+    best_label = None
+    best_episode_count = 0
+
+    for (condition_id, outcome_index), outcome_trades in grouped.items():
+        if len(outcome_trades) < 20:
+            continue
+        episodes = _price_whip_episodes(outcome_trades)
+        if episodes > best_episode_count:
+            best_episode_count = episodes
+            best_label = _label(condition_id, outcome_index, outcome_trades[0].outcome)
+
+    triggered = best_episode_count >= 2
+    intensity = min(1.0, best_episode_count / 3)
+    if best_label:
+        summary = f"price whips detected={best_episode_count} (peak in {best_label})"
+    else:
+        summary = "price whips detected=0"
+    return HeuristicResult("price_whips", triggered, intensity, summary)
+
+
+def _price_whip_episodes(trades: Sequence[Trade]) -> int:
     vwap = vwap_by_minute(trades)
     minutes = sorted(vwap.keys())
     if not minutes:
-        return HeuristicResult("price_whips", False, 0.0, "no minute bars")
+        return 0
     minute_trades: DefaultDict[int, List[Trade]] = defaultdict(list)
     for trade in trades:
         minute_trades[trade.timestamp // 60].append(trade)
@@ -224,10 +276,7 @@ def price_whips(trades: Sequence[Trade]) -> HeuristicResult:
             idx += 1
         else:
             idx = next_idx
-    triggered = episodes >= 2
-    intensity = min(1.0, episodes / 3)
-    summary = f"price whips detected={episodes}"
-    return HeuristicResult("price_whips", triggered, intensity, summary)
+    return episodes
 
 
 def constant_lookup(value: float) -> Callable[[Trade], float]:

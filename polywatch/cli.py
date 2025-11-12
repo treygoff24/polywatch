@@ -30,11 +30,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def label_to_exit_code(label: str) -> int:
-    if label.lower() == "suspicious":
-        return 2
-    if label.lower() == "watch":
-        return 1
-    return 0
+    return 2 if label.lower() == "suspicious" else 0
 
 
 def main(argv: Optional[list[str]] = None) -> int:
@@ -54,7 +50,7 @@ def main(argv: Optional[list[str]] = None) -> int:
 
     try:
         event = client.get_event_by_slug(args.slug)
-        trades = client.fetch_with_fallback(
+        trades, actual_lookback = client.fetch_with_fallback(
             event.event_id,
             lookback_seconds=lookback_seconds,
             page_limit=args.limit,
@@ -66,18 +62,21 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 3
 
     if not trades:
-        print("No trades found in requested window.")
+        window_hours = actual_lookback / 3600
+        print(f"No trades found in the last {window_hours:.1f}h.")
         return 0
 
     report = analyze_event(event, trades)
 
-    from .render import render_text_report, event_score_to_dict  # late import to avoid cycles
+    from .render import event_score_to_dict, render_text_report  # late import to avoid cycles
 
-    print(render_text_report(report, lookback_seconds))
+    print(render_text_report(report, actual_lookback))
 
     if args.json_out:
         path = Path(args.json_out)
-        path.write_text(json.dumps(event_score_to_dict(report), indent=2))
+        path.parent.mkdir(parents=True, exist_ok=True)
+        payload = event_score_to_dict(report, lookback_seconds=actual_lookback)
+        path.write_text(json.dumps(payload, indent=2))
         logging.info("Wrote JSON report to %s", path)
 
     return label_to_exit_code(report.label)

@@ -7,8 +7,8 @@
 - `docs/` is empty now; add narrative guides or sanitized sample reports there.
 
 ## Build, Test, and Development Commands
-- `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` installs the lone dependency (`requests`).
-- `python -m polywatch.cli --slug honduras-presidential-election --lookback 24h --json-out report.json` runs the analyzer locally and produces both console and JSON output.
+- `python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt` installs runtime deps plus `pytest` for the suite.
+- `python -m polywatch.cli --slug honduras-presidential-election --lookback 24h --json-out report.json` runs the analyzer locally; the reported window reflects any fallback lookback the client used.
 - `python -m polywatch.cli --help` surfaces pagination, logging, and exit-code knobs—update the help text when introducing new flags.
 - `pytest -q` runs the full suite; `python -m unittest discover tests` is an equivalent fallback.
 
@@ -19,9 +19,9 @@
 - Keep docstrings concise and reserve inline comments for non-obvious heuristics or API quirks.
 
 ## Testing Guidelines
-- Reuse `tests/test_heuristics.py::make_trade` to craft repeatable trade streams for new checks.
-- Place new cases under `tests/test_<module>.py`, name classes `<Module>Test`, and assert both trigger and non-trigger paths.
-- Target ≥90% branch coverage for fresh heuristics; `pytest -q -k heuristics` helps iterate quickly.
+- Reuse helpers in `tests/test_heuristics.py` (and neighboring modules like `tests/test_api.py`) to craft reproducible trade streams.
+- Add regression suites beside each module (`tests/test_<module>.py`), name classes `<Module>Test`, and cover both trigger/no-trigger paths.
+- Target ≥90% branch coverage for fresh heuristics; run `pytest -q` (or `pytest -q -k <module>`) before every PR.
 
 ## Commit & Pull Request Guidelines
 - With no bundled Git history, adopt imperative `area: action` commit subjects (e.g., `heuristics: relax timing variance`).
@@ -30,5 +30,6 @@
 
 ## Security & Configuration Tips
 - Current Polymarket endpoints are public; if you add secrets, load them from environment variables and document the names.
-- Respect `/trades` rate limits from `development-spec.md` by tuning `--sleep` or pagination arguments in `PolymarketClient.fetch_with_fallback`.
+- The client now caps `/trades` pagination at 5k rows and retries 429/5xx with backoff—adjust `--limit`, `--sleep`, or the client kwargs if rate limits shift.
+- Respect `/trades` rate limits from `development-spec.md` by tuning `PolymarketClient.fetch_with_fallback` arguments instead of editing throttling logic inline.
 - Store JSON artifacts from `--json-out` inside the repo (root or `docs/`) and avoid checking in real customer data.

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from .models import EventScore, HeuristicResult, OutcomeScore
 
@@ -8,7 +8,7 @@ from .models import EventScore, HeuristicResult, OutcomeScore
 def _summarize_top_drivers(heuristics: List[HeuristicResult], limit: int = 4) -> str:
     top = sorted(heuristics, key=lambda h: (int(h.triggered), h.intensity), reverse=True)
     drivers = [h.summary for h in top if h.triggered]
-    return ", ".join(drivers[:limit]) if drivers else "None"
+    return ", ".join(drivers[:limit])
 
 
 def render_text_report(report: EventScore, lookback_seconds: int) -> str:
@@ -24,7 +24,8 @@ def render_text_report(report: EventScore, lookback_seconds: int) -> str:
     )
     if report.rationale:
         lines.append("Rationale: " + "; ".join(report.rationale))
-    lines.append(f"Top drivers: {_summarize_top_drivers(report.heuristics)}")
+    top_drivers = _summarize_top_drivers(report.heuristics)
+    lines.append(f"Top drivers: {top_drivers or 'None'}")
     lines.append("")
     lines.append("By outcome:")
     for outcome in report.per_outcome:
@@ -48,8 +49,8 @@ def heuristic_to_dict(heuristic: HeuristicResult) -> Dict[str, object]:
     }
 
 
-def event_score_to_dict(report: EventScore) -> Dict[str, object]:
-    return {
+def event_score_to_dict(report: EventScore, lookback_seconds: Optional[int] = None) -> Dict[str, object]:
+    data: Dict[str, object] = {
         "event": {
             "title": report.event.title,
             "slug": report.event.slug,
@@ -70,4 +71,6 @@ def event_score_to_dict(report: EventScore) -> Dict[str, object]:
             for outcome in report.per_outcome
         ],
     }
-
+    if lookback_seconds is not None:
+        data["lookbackSeconds"] = lookback_seconds
+    return data

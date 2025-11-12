@@ -75,6 +75,7 @@ def top_k_trade_share(trades: Sequence[Trade], k: int) -> float:
         return 0.0
     counts: DefaultDict[str, int] = defaultdict(int)
     for trade in trades:
-        counts[trade.proxy_wallet] += 1
+        wallet = trade.proxy_wallet or f"missing:{id(trade)}"
+        counts[wallet] += 1
     shares = sorted(counts.values(), reverse=True)
     return sum(shares[:k]) / len(trades)

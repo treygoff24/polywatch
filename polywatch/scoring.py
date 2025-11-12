@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import replace
 from typing import Callable, Dict, List, Optional, Sequence, Tuple
 
 from . import heuristics
@@ -102,20 +103,22 @@ def analyze_event(event: EventMeta, trades: Sequence[Trade]) -> EventScore:
     order_lookup = _order_lookup_factory(meta_lookup)
     tick_lookup = _tick_lookup_factory(meta_lookup)
 
-    # Enrich trade outcome labels for reporting consistency
+    normalized_trades: List[Trade] = []
     for trade in trades:
         label = _outcome_label(trade.condition_id, trade.outcome_index, meta_lookup)
         if trade.outcome is None:
-            trade.outcome = label
+            normalized_trades.append(replace(trade, outcome=label))
+        else:
+            normalized_trades.append(trade)
 
-    event_results = _evaluate(trades, order_lookup, tick_lookup)
+    event_results = _evaluate(normalized_trades, order_lookup, tick_lookup)
     event_score_value = _compute_score(event_results)
     event_label = label_for_score(event_score_value)
     rationale = [res.summary for res in event_results if res.triggered][:4]
     if not rationale:
         rationale = [res.summary for res in sorted(event_results, key=lambda r: r.intensity, reverse=True)[:2]]
 
-    grouped = group_trades_by_outcome(trades)
+    grouped = group_trades_by_outcome(normalized_trades)
     outcome_scores: List[OutcomeScore] = []
     for (condition_id, outcome_index), outcome_trades in grouped.items():
         meta = meta_lookup.get((condition_id, outcome_index)) or meta_lookup.get((condition_id, None))
@@ -140,7 +143,7 @@ def analyze_event(event: EventMeta, trades: Sequence[Trade]) -> EventScore:
 
     return EventScore(
         event=event,
-        trades=tuple(trades),
+        trades=tuple(normalized_trades),
         heuristics=event_results,
         score=event_score_value,
         label=event_label,

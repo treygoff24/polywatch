@@ -1,5 +1,5 @@
 import unittest
-from typing import List
+from typing import List, Optional
 
 from polywatch import heuristics
 from polywatch.models import Trade
@@ -9,7 +9,7 @@ BASE_TS = 1_700_000_000
 
 def make_trade(
     offset: int,
-    wallet: str,
+    wallet: Optional[str],
     side: str = "BUY",
     size: float = 1.0,
     price: float = 0.5,
@@ -99,6 +99,43 @@ class HeuristicsTest(unittest.TestCase):
         result = heuristics.price_whips(trades)
         self.assertTrue(result.triggered)
         self.assertIn("detected", result.summary)
+
+    def test_wallet_concentration_ignores_missing_wallets(self) -> None:
+        trades: List[Trade] = []
+        trades.extend(make_trade(i * 15, wallet=None, size=1.0) for i in range(30))
+        trades.extend(make_trade(1000 + i * 15, wallet="strong", size=5.0) for i in range(60))
+        result = heuristics.wallet_concentration(trades)
+        self.assertTrue(result.triggered)
+        self.assertIn("missing wallet", result.summary)
+
+    def test_price_whips_isolated_per_outcome(self) -> None:
+        trades: List[Trade] = []
+
+        def add_block(condition: str, outcome: str, start_minute: int, prices: List[float]) -> None:
+            for idx, price in enumerate(prices):
+                minute = start_minute + idx
+                for j in range(4):
+                    trades.append(
+                        Trade(
+                            timestamp=BASE_TS + minute * 60 + j,
+                            proxy_wallet=f"{condition}-wallet{j%2}",
+                            side="BUY" if j % 2 == 0 else "SELL",
+                            condition_id=condition,
+                            outcome_index=0,
+                            outcome=outcome,
+                            size=5.0,
+                            price=price,
+                            tx_hash=None,
+                        )
+                    )
+
+        add_block("cid-a", "CondA", 0, [0.30, 0.38, 0.32, 0.31])
+        add_block("cid-a", "CondA", 10, [0.32, 0.40, 0.33, 0.31])
+        add_block("cid-b", "CondB", 1, [0.50, 0.51, 0.50])
+
+        result = heuristics.price_whips(trades)
+        self.assertTrue(result.triggered)
+        self.assertIn("CondA", result.summary)
 
 
 if __name__ == "__main__":  # pragma: no cover

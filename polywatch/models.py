@@ -54,10 +54,10 @@ class EventMeta:
         )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Trade:
     timestamp: int
-    proxy_wallet: str
+    proxy_wallet: Optional[str]
     side: str
     condition_id: str
     outcome_index: Optional[int]
@@ -102,5 +102,4 @@ class FetchOptions:
     slug: str
     lookback_seconds: int
     limit: int
-
 
