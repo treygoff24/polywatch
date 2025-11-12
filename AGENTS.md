@@ -20,6 +20,12 @@
 - Keep the CLI output tables readable (ASCII borders, wrapped summaries) and sync representative snippets in `README.md` when layouts change.
 - Keep docstrings concise and reserve inline comments for non-obvious heuristics or API quirks.
 
+## CLI Output Expectations
+- `render_text_report` must emit the headline summary plus the three ASCII-table sections: **Market Overview**, **Outcome Snapshot**, and **Suspicion Indicators**. Adding/removing metrics requires updating the README sample and `tests/test_render.py`.
+- Market Overview should cover trade counts, total/average size & notional, largest trade callouts, unique wallet/missing share, and top-wallet concentration in both trade count and notional terms.
+- Outcome Snapshot rows need trades, notional, total-volume share, VWAP, last trade, and the per-outcome suspicion score/label.
+- Suspicion Indicators list every heuristic with trigger state, intensity, and a wrapped summary; keep wording concise so tables stay ≤80 characters wide.
+
 ## Testing Guidelines
 - Reuse helpers in `tests/test_heuristics.py` (and neighboring modules like `tests/test_api.py`) to craft reproducible trade streams.
 - Add regression suites beside each module (`tests/test_<module>.py`), name classes `<Module>Test`, and cover both trigger/no-trigger paths.
