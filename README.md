@@ -41,16 +41,45 @@ Exit codes follow the spec: `0` for normal/watch, `2` for suspicious, `3` for co
 ### Sample Output
 
 ```
-Event: Honduras Presidential Election (slug=honduras-presidential-election, id=74717) | Window: last 24.0h | Trades: 182
-Overall suspicion score: 42.7 → watch
-Rationale: wallet concentration top1=64% trades (45% notional), top3=89%; min-size trades share=82% over 182 trades
-Top drivers: wallet concentration..., min-size trades...
+Event: Honduras Presidential Election (slug=honduras-presidential-election, id=74717)
+Window: last 24.0h | Trades evaluated: 58 | Score: 4.9 → normal
+Top signals: min-size trades share=50% over 58 trades; wallet concentration top1=9% trades (22% notional), top3=22%
 
-By outcome:
-- Will Mario Rivera... (Yes) score 71.5 → suspicious trades=104 | wallet concentration..., ping-pong...
+Market Overview
++--------------------------+--------------------------------------------------------------+
+| Metric                   | Value                                                        |
++--------------------------+--------------------------------------------------------------+
+| Total trades             | 58                                                           |
+| Average trade size       | 73.28 shares                                                 |
+| Largest trade (shares)   | 658.77 by 0x58b9… @ 39.8%                                    |
+| Top wallet (notional)    | 21.9%                                                        |
+| Top 3 wallets (notional) | 47.1%                                                        |
++--------------------------+--------------------------------------------------------------+
+
+Outcome Snapshot
++------------------------------------------------------+--------+----------+--------------+-------+------------+---------------+
+| Outcome                                              | Trades | Notional | Volume Share | VWAP  | Last Price | Suspicion     |
++------------------------------------------------------+--------+----------+--------------+-------+------------+---------------+
+| Will Rixi Moncada win the 2025 Honduras election? No | 12     | $791.98  | 42.9%        | 39.1% | 39.5%      | 3.5 (normal)  |
+| ...                                                  | ...    | ...      | ...          | ...   | ...        | ...           |
++------------------------------------------------------+--------+----------+--------------+-------+------------+---------------+
+
+Suspicion Indicators
++----------------------+--------+-----------+--------------------------------------------------------------+
+| Indicator            | Status | Intensity | Details                                                      |
++----------------------+--------+-----------+--------------------------------------------------------------+
+| Wallet Concentration | clear  | 0.22      | wallet concentration top1=9% trades (22% notional), top3=22% |
+| ...                  | ...    | ...       | ...                                                          |
++----------------------+--------+-----------+--------------------------------------------------------------+
 ```
 
-The JSON file mirrors the same content (`score`, `label`, per-outcome scores, heuristics, `lookbackSeconds`) for downstream ingestion.
+The JSON file mirrors the same content (`score`, `label`, per-outcome scores, heuristics, `lookbackSeconds`) for downstream ingestion, while the terminal report now doubles as a market-health snapshot (totals, averages, VWAP/last trade per outcome, wallet coverage, etc.).
+
+### Report Sections
+
+- **Market Overview** – headline counts, notional totals, averages, largest trade callouts, and wallet concentration metrics (unique wallets, missing metadata share, top wallet dominance).
+- **Outcome Snapshot** – per-contract trade counts, notional volume share, VWAP, last price, and localized suspicion score so you can see which legs drive activity.
+- **Suspicion Indicators** – tabular rendering of every heuristic with trigger state, intensity, and wrapped summaries for quick scanning.
 
 ## Heuristics & Scoring
 

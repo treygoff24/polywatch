@@ -3,6 +3,7 @@
 ## Project Structure & Module Organization
 - `polywatch/` houses the CLI: `api.py` handles HTTP, `models.py` stores dataclasses, `heuristics.py`/`scoring.py` compute scores, `render.py` formats output, and `cli.py` orchestrates them.
 - `tests/` mirrors core modules with deterministic unittest suites (`test_utils.py`, `test_heuristics.py`).
+- `tests/test_render.py` guards the text/table report layout—update it whenever `render.py` output changes.
 - `development-spec.md` is the canonical design document—consult it before touching heuristics or API thresholds.
 - `docs/` is empty now; add narrative guides or sanitized sample reports there.
 
@@ -16,11 +17,13 @@
 - Stick to PEP 8 with four-space indentation, keep the existing type hints, and favor short, pure helpers inside `heuristics.py` and `utils.py`.
 - Use snake_case for functions and variables, PascalCase for dataclasses, and kebab-case for CLI flags to stay aligned with `argparse`.
 - Route diagnostics through the logger configured in `cli.py`; user-facing text belongs in `render.py`.
+- Keep the CLI output tables readable (ASCII borders, wrapped summaries) and sync representative snippets in `README.md` when layouts change.
 - Keep docstrings concise and reserve inline comments for non-obvious heuristics or API quirks.
 
 ## Testing Guidelines
 - Reuse helpers in `tests/test_heuristics.py` (and neighboring modules like `tests/test_api.py`) to craft reproducible trade streams.
 - Add regression suites beside each module (`tests/test_<module>.py`), name classes `<Module>Test`, and cover both trigger/no-trigger paths.
+- When you tweak formatting/metrics in `render.py`, extend `tests/test_render.py` (and any golden strings) so the CLI output stays deterministic.
 - Target ≥90% branch coverage for fresh heuristics; run `pytest -q` (or `pytest -q -k <module>`) before every PR.
 
 ## Commit & Pull Request Guidelines
