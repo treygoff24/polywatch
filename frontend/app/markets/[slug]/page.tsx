@@ -15,13 +15,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 interface MarketPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({
   params
 }: MarketPageProps): Promise<Metadata> {
-  const entry = await getReportIndexEntry(params.slug);
+  const { slug } = await params;
+  const entry = await getReportIndexEntry(slug);
   if (!entry) {
     return {
       title: "Market not found - Polywatch"
@@ -34,8 +35,9 @@ export async function generateMetadata({
 }
 
 export default async function MarketPage({ params }: MarketPageProps) {
+  const { slug } = await params;
   const index = await getReportIndex();
-  const entry = index.reports.find((item) => item.slug === params.slug);
+  const entry = index.reports.find((item) => item.slug === slug);
   if (!entry) {
     notFound();
   }

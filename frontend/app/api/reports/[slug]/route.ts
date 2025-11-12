@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import { getReport } from "@/lib/fetchReport";
 
-interface Params {
-  params: { slug: string };
-}
-
-export async function GET(_: Request, { params }: Params) {
+export async function GET(
+  _: Request,
+  { params }: { params: Promise<{ slug: string }> }
+) {
   try {
-    const report = await getReport(params.slug);
+    const { slug } = await params;
+    const report = await getReport(slug);
     return NextResponse.json(report, {
       headers: {
         "Cache-Control": "s-maxage=300, stale-while-revalidate=300"
@@ -20,4 +20,3 @@ export async function GET(_: Request, { params }: Params) {
     );
   }
 }
-
