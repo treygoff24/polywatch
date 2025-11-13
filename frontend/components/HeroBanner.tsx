@@ -1,6 +1,8 @@
 import { ReportIndexEntry } from "@/lib/types";
 import clsx from "clsx";
 import ScoreBadge from "./ScoreBadge";
+import LocalizedTime from "./LocalizedTime";
+import { ReactNode } from "react";
 
 interface HeroBannerProps {
   entry: ReportIndexEntry;
@@ -45,14 +47,24 @@ export default function HeroBanner({ entry }: HeroBannerProps) {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <StatTile
             label="Last ingest"
-            value={new Date(entry.updatedAt).toLocaleString()}
+            value={
+              <LocalizedTime
+                value={entry.updatedAt}
+                options={{ dateStyle: "full", timeStyle: "short" }}
+              />
+            }
           />
           <StatTile
-            label="Last trade (UTC)"
+            label="Last trade"
             value={
-              entry.lastTradeTimestamp
-                ? new Date(entry.lastTradeTimestamp * 1000).toISOString()
-                : "n/a"
+              entry.lastTradeTimestamp ? (
+                <LocalizedTime
+                  value={entry.lastTradeTimestamp * 1000}
+                  options={{ dateStyle: "medium", timeStyle: "short" }}
+                />
+              ) : (
+                "n/a"
+              )
             }
           />
           <StatTile label="Slug" value={entry.slug} />
@@ -66,7 +78,13 @@ export default function HeroBanner({ entry }: HeroBannerProps) {
   );
 }
 
-function StatTile({ label, value }: { label: string; value: string }) {
+function StatTile({
+  label,
+  value
+}: {
+  label: string;
+  value: ReactNode | string;
+}) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
       <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{label}</p>
@@ -74,4 +92,3 @@ function StatTile({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
-

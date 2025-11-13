@@ -1,5 +1,6 @@
 import { MarketOverview } from "@/lib/types";
 import SectionCard from "./SectionCard";
+import LocalizedTime from "./LocalizedTime";
 
 interface MarketOverviewGridProps {
   overview: MarketOverview;
@@ -113,9 +114,15 @@ function Callout({
       </p>
       <p className="mt-3 text-lg font-semibold text-white">{value}</p>
       <p className="text-[0.7rem] text-slate-400">
-        {timestamp ? new Date(timestamp * 1000).toISOString() : "n/a"}
+        {timestamp ? (
+          <LocalizedTime
+            value={timestamp * 1000}
+            options={{ dateStyle: "medium", timeStyle: "short" }}
+          />
+        ) : (
+          "n/a"
+        )}
       </p>
     </div>
   );
 }
-
