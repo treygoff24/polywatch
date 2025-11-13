@@ -25,6 +25,18 @@ python -m polywatch.cli \
   --log-level INFO
 ```
 
+## Sample Trade Dumps
+
+Two curated Polymarket dumps (`honduras-24h-trades.json`, `honduras-48h-trades.json`) live at the repo root for deterministic testing. Each file stores the raw trades plus the actual lookback span, so you can replay analyses without requerying the API.
+
+```bash
+python scripts/analyze_trades.py \
+  --trades-file honduras-48h-trades.json \
+  --json-out docs/reports/honduras-48h-offline.json
+```
+
+The helper script loads the trades file, fetches the corresponding event metadata, and renders the same text/JSON reports the CLI would normally emit. Point `--trades-file` at any dump created via `polywatch.cli --json-out` to inspect other markets offline.
+
 ## Exporting Cached Reports
 
 The frontend consumes cached JSON built with the exporter script. Generate snapshots for one or more slugs:
