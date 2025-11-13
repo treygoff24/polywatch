@@ -9,6 +9,9 @@ const DEFAULT_REPORTS_DIR = path.resolve(process.cwd(), "..", "docs", "reports")
 const REPORTS_FILE_ROOT = process.env.REPORTS_FILE_ROOT ?? DEFAULT_REPORTS_DIR;
 const REPORTS_BASE_URL =
   process.env.REPORTS_BASE_URL ?? process.env.NEXT_PUBLIC_REPORTS_BASE_URL;
+const REQUIRE_REMOTE_REPORTS =
+  process.env.FORCE_REMOTE_REPORTS === "1" ||
+  process.env.NODE_ENV === "production";
 const EMPTY_REPORT_INDEX: ReportIndex = {
   generatedAt: new Date(0).toISOString(),
   reports: []
@@ -61,12 +64,24 @@ async function fetchRemoteJson<T>(relative: string): Promise<T> {
   return (await res.json()) as T;
 }
 
+function ensureRemoteConfigured(): void {
+  if (REQUIRE_REMOTE_REPORTS && !REPORTS_BASE_URL) {
+    throw new Error(
+      "Reports base URL must be configured for production builds. Set REPORTS_BASE_URL or NEXT_PUBLIC_REPORTS_BASE_URL."
+    );
+  }
+}
+
 export async function getReportIndex(): Promise<ReportIndex> {
+  ensureRemoteConfigured();
   if (REPORTS_BASE_URL) {
     try {
       return await fetchRemoteIndex();
-    } catch {
-      // fall back to local cache
+    } catch (error) {
+      if (REQUIRE_REMOTE_REPORTS) {
+        throw error;
+      }
+      // fall back to local cache while developing
     }
   }
 
@@ -86,11 +101,15 @@ export async function getReportIndexEntry(
 }
 
 export async function getReport(slug: string): Promise<ReportPayload> {
+  ensureRemoteConfigured();
   if (REPORTS_BASE_URL) {
     try {
       return await fetchRemoteJson<ReportPayload>(`${slug}.json`);
-    } catch {
-      // fall back to local cache
+    } catch (error) {
+      if (REQUIRE_REMOTE_REPORTS) {
+        throw error;
+      }
+      // fall back to local cache while developing
     }
   }
 

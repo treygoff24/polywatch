@@ -8,6 +8,11 @@ import SuspicionIndicatorsList from "@/components/SuspicionIndicatorsList";
 import { getFeaturedReport } from "@/lib/fetchReport";
 import { TimeseriesPoint } from "@/lib/types";
 
+const STALE_THRESHOLD_HOURS = Number(
+  process.env.REPORT_STALE_HOURS ?? "6"
+);
+const STALE_THRESHOLD_MS = STALE_THRESHOLD_HOURS * 60 * 60 * 1000;
+
 export default async function Home() {
   const { entry, report, index } = await getFeaturedReport();
 
@@ -27,11 +32,32 @@ export default async function Home() {
   }
 
   const timeseries = report.analytics.timeseries.perMinute;
+  const updatedAtIso = entry?.updatedAt ?? index.generatedAt;
+  const updatedAtDate = updatedAtIso ? new Date(updatedAtIso) : null;
+  const isStale =
+    !updatedAtDate ||
+    Date.now() - updatedAtDate.getTime() > STALE_THRESHOLD_MS;
+  const updatedLabel = updatedAtDate
+    ? updatedAtDate.toUTCString()
+    : "unknown";
 
   return (
     <main className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
       <div className="flex flex-col gap-10">
         <HeroBanner entry={entry} />
+        {isStale && (
+          <SectionCard
+            title="Stale snapshot"
+            subtitle={`Data older than ${STALE_THRESHOLD_HOURS}h`}
+          >
+            <p className="text-sm text-slate-100">
+              Latest exporter run:{" "}
+              <span className="font-mono text-neon-cyan">{updatedLabel}</span>.{" "}
+              Refresh the reports branch or fix the exporter workflow to
+              restore live data.
+            </p>
+          </SectionCard>
+        )}
         <MarketSearchBar
           markets={[...index.reports].sort(
             (a, b) => b.score - a.score || b.tradeCount - a.tradeCount
