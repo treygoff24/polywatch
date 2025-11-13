@@ -181,6 +181,51 @@
       ]
     },
     {
+      "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+      "outcomeIndex": 0,
+      "score": 25.0,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": true,
+          "intensity": 1.0,
+          "summary": "wallet concentration top1=100% trades (100% notional), top3=100%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 1 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
       "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)",
       "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
       "outcomeIndex": 1,
@@ -409,20 +454,20 @@
       "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)",
       "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
       "outcomeIndex": 0,
-      "score": 4.05,
+      "score": 3.8684210526315788,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.3,
-          "summary": "wallet concentration top1=15% trades (89% notional), top3=30%"
+          "intensity": 0.2631578947368421,
+          "summary": "wallet concentration top1=11% trades (89% notional), top3=26%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.3,
-          "summary": "min-size trades share=30% over 20 trades"
+          "intensity": 0.3157894736842105,
+          "summary": "min-size trades share=32% over 19 trades"
         },
         {
           "name": "timing_regular",
@@ -446,7 +491,7 @@
           "name": "price_whips",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "price whips detected=0"
+          "summary": "small sample"
         }
       ]
     }
@@ -455,10 +500,10 @@
   "analytics": {
     "marketOverview": {
       "totalTrades": 105,
-      "totalSize": 19361.861681,
-      "totalNotional": 7801.595388,
-      "averageSize": 184.39868267619048,
-      "averageNotional": 74.30090845714285,
+      "totalSize": 19383.861681,
+      "totalNotional": 7805.145388000001,
+      "averageSize": 184.60820648571428,
+      "averageNotional": 74.33471798095239,
       "walletCoverage": {
         "uniqueWallets": 53,
         "missingWallets": 0,
@@ -467,8 +512,8 @@
       "topWallets": {
         "tradesTop1": 0.09523809523809523,
         "tradesTop3": 0.2571428571428571,
-        "notionalTop1": 0.41242847635358565,
-        "notionalTop3": 0.772018862739822
+        "notionalTop1": 0.41224089226408145,
+        "notionalTop3": 0.7716677268126244
       },
       "largestBySize": {
         "size": 4278.383901,
@@ -491,7 +536,7 @@
         "outcomeIndex": 1,
         "tradeCount": 5,
         "notional": 18.296398,
-        "volumeShare": 0.002345212368760183,
+        "volumeShare": 0.0023441457001082576,
         "vwap": 0.6454170250083074,
         "lastPrice": 0.64,
         "score": 28.599999999999998,
@@ -541,7 +586,7 @@
         "outcomeIndex": 0,
         "tradeCount": 4,
         "notional": 2.78335,
-        "volumeShare": 0.000356766771612022,
+        "volumeShare": 0.0003566045040338715,
         "vwap": 0.005977728619904643,
         "lastPrice": 0.006,
         "score": 26.5,
@@ -591,9 +636,59 @@
         "outcomeIndex": 0,
         "tradeCount": 1,
         "notional": 0.7474,
-        "volumeShare": 9.580091799551807e-05,
+        "volumeShare": 9.575734503922092e-05,
         "vwap": 0.005,
         "lastPrice": 0.005,
+        "score": 25.0,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": true,
+            "intensity": 1.0,
+            "summary": "wallet concentration top1=100% trades (100% notional), top3=100%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 1 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+        "outcomeIndex": 0,
+        "tradeCount": 1,
+        "notional": 9.25,
+        "volumeShare": 0.0011851156564260017,
+        "vwap": 0.25,
+        "lastPrice": 0.25,
         "score": 25.0,
         "labelText": "normal",
         "heuristics": [
@@ -641,7 +736,7 @@
         "outcomeIndex": 1,
         "tradeCount": 12,
         "notional": 80.27812399999999,
-        "volumeShare": 0.010289962502218399,
+        "volumeShare": 0.010285282337395453,
         "vwap": 0.9948906437444849,
         "lastPrice": 0.991,
         "score": 7.625,
@@ -691,7 +786,7 @@
         "outcomeIndex": 1,
         "tradeCount": 12,
         "notional": 91.80885299999998,
-        "volumeShare": 0.011767958787149549,
+        "volumeShare": 0.011762606387979813,
         "vwap": 0.9929539943557844,
         "lastPrice": 0.993999999465574,
         "score": 7.625,
@@ -741,7 +836,7 @@
         "outcomeIndex": 1,
         "tradeCount": 12,
         "notional": 961.7761899999999,
-        "volumeShare": 0.12327942454941371,
+        "volumeShare": 0.1232233535942431,
         "vwap": 0.769444406512177,
         "lastPrice": 0.77,
         "score": 7.5,
@@ -791,7 +886,7 @@
         "outcomeIndex": 1,
         "tradeCount": 15,
         "notional": 488.531891,
-        "volumeShare": 0.06261948572101468,
+        "volumeShare": 0.06259100461486496,
         "vwap": 0.6359703770563334,
         "lastPrice": 0.64,
         "score": 5.499999999999999,
@@ -841,7 +936,7 @@
         "outcomeIndex": 0,
         "tradeCount": 24,
         "notional": 2536.4961929999995,
-        "volumeShare": 0.3251253194829231,
+        "volumeShare": 0.32497744332856743,
         "vwap": 0.3660856975924288,
         "lastPrice": 0.39,
         "score": 4.375,
@@ -889,25 +984,25 @@
         "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)",
         "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
         "outcomeIndex": 0,
-        "tradeCount": 20,
-        "notional": 3620.8769890000003,
-        "volumeShare": 0.46412006889891283,
-        "vwap": 0.377236063683409,
+        "tradeCount": 19,
+        "notional": 3615.176989,
+        "volumeShare": 0.46317868653134175,
+        "vwap": 0.37723173756949085,
         "lastPrice": 0.37999988599995277,
-        "score": 4.05,
+        "score": 3.8684210526315788,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.3,
-            "summary": "wallet concentration top1=15% trades (89% notional), top3=30%"
+            "intensity": 0.2631578947368421,
+            "summary": "wallet concentration top1=11% trades (89% notional), top3=26%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.3,
-            "summary": "min-size trades share=30% over 20 trades"
+            "intensity": 0.3157894736842105,
+            "summary": "min-size trades share=32% over 19 trades"
           },
           {
             "name": "timing_regular",
@@ -931,19 +1026,13 @@
             "name": "price_whips",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "price whips detected=0"
+            "summary": "small sample"
           }
         ]
       }
     ],
     "timeseries": {
       "perMinute": [
-        {
-          "timestamp": 1762924260,
-          "iso": "2025-11-12T05:11:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.38
-        },
         {
           "timestamp": 1762926840,
           "iso": "2025-11-12T05:54:00+00:00",
@@ -1369,6 +1458,12 @@
           "iso": "2025-11-13T04:16:00+00:00",
           "tradeCount": 1,
           "vwap": 0.64
+        },
+        {
+          "timestamp": 1763009700,
+          "iso": "2025-11-13T04:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.25
         }
       ]
     }
