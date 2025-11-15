@@ -98,6 +98,7 @@ export interface ReportIndexEntry {
   tradeCount: number;
   lastTradeTimestamp: number | null;
   topSignals: string[];
+  refreshMode?: "scheduled" | "on-demand";
   outcomes: Array<{
     label: string;
     score: number;
@@ -109,4 +110,3 @@ export interface ReportIndex {
   generatedAt: string;
   reports: ReportIndexEntry[];
 }
-

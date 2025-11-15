@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { backendFetch, isBackendConfigured } from "./backendClient";
 import { ReportIndex, ReportIndexEntry, ReportPayload } from "./types";
 
 type ErrnoException = NodeJS.ErrnoException;
@@ -18,6 +19,18 @@ const EMPTY_REPORT_INDEX: ReportIndex = {
 };
 const LOCAL_INDEX_FILE = path.resolve(REPORTS_FILE_ROOT, "index.json");
 const REMOTE_INDEX_TTL_MS = 30 * 1000;
+export const DEFAULT_MARKET_SLUG =
+  process.env.DEFAULT_MARKET_SLUG ?? "honduras-presidential-election";
+
+export class ReportFetchError extends Error {
+  status: number;
+
+  constructor(message: string, status = 500) {
+    super(message);
+    this.name = "ReportFetchError";
+    this.status = status;
+  }
+}
 
 let cachedLocalIndex:
   | {
@@ -72,6 +85,19 @@ function ensureRemoteConfigured(): void {
   }
 }
 
+async function fetchBackendIndex(): Promise<ReportIndex | null> {
+  if (!isBackendConfigured()) {
+    return null;
+  }
+  const response = await backendFetch("/reports/index");
+  if (!response.ok) {
+    throw new Error(
+      `Backend index request failed: ${response.status} ${response.statusText}`
+    );
+  }
+  return (await response.json()) as ReportIndex;
+}
+
 export async function getReportIndex(): Promise<ReportIndex> {
   ensureRemoteConfigured();
   if (REPORTS_BASE_URL) {
@@ -96,8 +122,26 @@ export async function getReportIndex(): Promise<ReportIndex> {
 export async function getReportIndexEntry(
   slug: string
 ): Promise<ReportIndexEntry | null> {
-  const index = await getReportIndex();
+  const { index } = await getResolvedReportIndex();
   return index.reports.find((entry) => entry.slug === slug) ?? null;
+}
+
+export async function getResolvedReportIndex(): Promise<{
+  index: ReportIndex;
+  source: "backend" | "static";
+}> {
+  try {
+    const backendIndex = await fetchBackendIndex();
+    if (backendIndex) {
+      return { index: backendIndex, source: "backend" };
+    }
+  } catch (error) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("Falling back to static index:", error);
+    }
+  }
+  const fallback = await getReportIndex();
+  return { index: fallback, source: "static" };
 }
 
 export async function getReport(slug: string): Promise<ReportPayload> {
@@ -125,20 +169,44 @@ export async function getReport(slug: string): Promise<ReportPayload> {
   );
 }
 
+export async function getLiveReport(slug: string): Promise<ReportPayload> {
+  try {
+    const response = await backendFetch(`/reports/${slug}`);
+    if (!response.ok) {
+      throw new ReportFetchError(
+        `Backend report ${slug} failed: ${response.status} ${response.statusText}`,
+        response.status || 500
+      );
+    }
+    return (await response.json()) as ReportPayload;
+  } catch (error) {
+    if (error instanceof ReportFetchError) {
+      throw error;
+    }
+    throw new ReportFetchError(
+      `Backend report ${slug} failed: ${(error as Error).message}`,
+      502
+    );
+  }
+}
+
 export async function getFeaturedReport(): Promise<{
   entry: ReportIndexEntry | null;
   report: ReportPayload | null;
   index: ReportIndex;
 }> {
-  const index = await getReportIndex();
+  const { index, source } = await getResolvedReportIndex();
   if (index.reports.length === 0) {
     return { entry: null, report: null, index };
   }
   const sorted = [...index.reports].sort(
     (a, b) => b.score - a.score || b.tradeCount - a.tradeCount
   );
-  const entry = sorted[0];
-  const report = await getReport(entry.slug);
+  const entry =
+    index.reports.find((item) => item.slug === DEFAULT_MARKET_SLUG) ??
+    sorted[0];
+  const report =
+    source === "backend" ? await getLiveReport(entry.slug) : await getReport(entry.slug);
   return { entry, report, index };
 }
 

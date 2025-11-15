@@ -53,6 +53,32 @@ The exporter reuses the CLI’s client, honours the same rate-limit defaults (5k
 
 A GitHub Actions workflow (`.github/workflows/export-reports.yml`) refreshes these files every 15 minutes and pushes them to a `reports` branch. Adjust `POLYWATCH_SLUGS`, `POLYWATCH_LOOKBACK`, or the sleep/page parameters in the workflow environment to widen coverage without breaking Polymarket’s 75 req/10 s budget.
 
+## Live Backend Service
+
+On-demand market analysis runs through a small FastAPI server (`polywatch.service`). It exposes three capabilities:
+
+- `GET /search?q=` proxies Polymarket’s live events API so the UI can search the entire venue.
+- `POST /reports/<slug>/refresh` reruns the analyzer for a slug, writes `<slug>.json`, and upserts the summary into `docs/reports/index.json` with `refreshMode: "on-demand"` (scheduled slugs stay `"scheduled"`).
+- `GET /reports/<slug>` and `/reports/index` stream the cached JSON so the frontend can render freshly requested markets without waiting on the cron job.
+
+Environment knobs:
+
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `REPORTS_FILE_ROOT` / `REPORTS_INDEX_FILE` | Where JSON payloads + `index.json` live. | `docs/reports` |
+| `POLYWATCH_DEFAULT_SLUGS` | Comma list of cron-backed slugs that keep the `"scheduled"` refresh mode. | `honduras-presidential-election` |
+| `POLYWATCH_ON_DEMAND_LOOKBACK` | Lookback passed to `PolymarketClient` for manual refreshes. | `24h` |
+| `POLYWATCH_PAGE_LIMIT`, `POLYWATCH_MAX_PAGES`, `POLYWATCH_SLEEP_SECONDS` | Tuning knobs for `/trades` pagination. | `5000`, `50`, `0.3` |
+| `POLYWATCH_SEARCH_LIMIT` | Maximum Polymarket results returned per query. | `10` |
+
+Run the service locally alongside the frontend:
+
+```bash
+uvicorn polywatch.service:app --reload --port 8000
+```
+
+The Next.js app proxies all backend calls through `/api/search` and `/api/live-reports/*`. Set `POLYWATCH_BACKEND_URL=http://127.0.0.1:8000` before `npm run dev` (or configure it in Vercel) so the UI can search and refresh markets on demand.
+
 ## Cyberpunk Web Frontend
 
 The cyberpunk dashboard lives in `frontend/` (Next.js 15 App Router + Tailwind). It renders the cached reports with hero cards, market overview tiles, outcome tables, sparklines, and a fuzzy search launcher.
@@ -60,14 +86,21 @@ The cyberpunk dashboard lives in `frontend/` (Next.js 15 App Router + Tailwind).
 ```bash
 cd frontend
 npm install
-REPORTS_FILE_ROOT=../docs/reports npm run dev
+REPORTS_FILE_ROOT=../docs/reports POLYWATCH_BACKEND_URL=http://127.0.0.1:8000 npm run dev
 ```
 
 - `REPORTS_FILE_ROOT` (default: `../docs/reports`) points the server to local JSON. In production, set `REPORTS_BASE_URL` (and `NEXT_PUBLIC_REPORTS_BASE_URL` for client-side fetches) to the hosted snapshots, e.g. a `reports` branch served over GitHub Pages.
+- `POLYWATCH_BACKEND_URL` must target the FastAPI service so search and manual refreshes work. When unset, only the default Honduras snapshot is available.
 - Production builds now require those remote URLs; copy `frontend/.env.production.example`, update the base URL, and add the variables to Vercel before deploying. The app refuses to fall back to bundled fixtures when `NODE_ENV=production`.
 - `REPORT_STALE_HOURS` (default: `6`) controls when the dashboard shows a stale-data banner if the exporter hasn’t refreshed recently.
 - `npm run build` performs an ISR-ready production build, `npm run start` serves it.
 - `npm run test:e2e` executes Playwright smoke tests against the dashboard, verifying the featured report renders and the search flow drills into `/markets/[slug]`.
+
+### Live UX Expectations
+
+- The homepage always defaults to the Honduras Presidential Election snapshot (cron refreshed every 15 minutes).
+- The search bar now queries the Polymarket API via the backend service. Selecting a result triggers an immediate refresh, writes the JSON snapshot, and then navigates to `/markets/[slug]`.
+- Non-default markets render with a `Refresh report` button so users can pull fresh data on demand without touching the cron workflow. Default markets continue to rely on the scheduled exporter.
 
 ### Key Flags
 
