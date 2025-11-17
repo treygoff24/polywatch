@@ -4,26 +4,26 @@
     "slug": "honduras-presidential-election",
     "id": 74717
   },
-  "score": 1.8504672897196262,
+  "score": 1.8888888888888888,
   "label": "normal",
   "heuristics": [
     {
       "name": "wallet_concentration",
       "triggered": false,
-      "intensity": 0.1308411214953271,
+      "intensity": 0.12962962962962962,
       "summary": "wallet concentration top1=5% trades (24% notional), top3=13%"
     },
     {
       "name": "min_size_spam",
       "triggered": false,
-      "intensity": 0.08878504672897196,
-      "summary": "min-size trades share=9% over 214 trades"
+      "intensity": 0.08796296296296297,
+      "summary": "min-size trades share=9% over 216 trades"
     },
     {
       "name": "timing_regular",
       "triggered": false,
       "intensity": 0.0,
-      "summary": "timing CV=1.44, z-score=0.0"
+      "summary": "timing CV=1.46, z-score=0.0"
     },
     {
       "name": "ping_pong",
@@ -34,8 +34,8 @@
     {
       "name": "round_trips",
       "triggered": false,
-      "intensity": 0.11214953271028037,
-      "summary": "round-trip wallets share=11% of trades"
+      "intensity": 0.12962962962962962,
+      "summary": "round-trip wallets share=13% of trades"
     },
     {
       "name": "price_whips",
@@ -49,20 +49,20 @@
       "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
       "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
       "outcomeIndex": 0,
-      "score": 5.624999999999999,
+      "score": 14.500000000000002,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.75,
-          "summary": "wallet concentration top1=25% trades (27% notional), top3=75%"
+          "intensity": 0.6,
+          "summary": "wallet concentration top1=20% trades (22% notional), top3=60%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "min-size trades share=0% over 8 trades"
+          "summary": "min-size trades share=0% over 10 trades"
         },
         {
           "name": "timing_regular",
@@ -74,13 +74,13 @@
           "name": "ping_pong",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "small sample"
+          "summary": "no alternating sequences"
         },
         {
           "name": "round_trips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "small sample"
+          "triggered": true,
+          "intensity": 1.0,
+          "summary": "round-trip wallets share=100% of trades"
         },
         {
           "name": "price_whips",
@@ -454,14 +454,14 @@
       "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
       "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
       "outcomeIndex": 0,
-      "score": 1.1451612903225807,
+      "score": 1.2096774193548387,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
           "intensity": 0.07526881720430108,
-          "summary": "wallet concentration top1=3% trades (4% notional), top3=8%"
+          "summary": "wallet concentration top1=3% trades (5% notional), top3=8%"
         },
         {
           "name": "min_size_spam",
@@ -473,7 +473,7 @@
           "name": "timing_regular",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "timing CV=2.91, z-score=0.0"
+          "summary": "timing CV=2.92, z-score=1.0"
         },
         {
           "name": "ping_pong",
@@ -484,8 +484,8 @@
         {
           "name": "round_trips",
           "triggered": false,
-          "intensity": 0.17204301075268819,
-          "summary": "round-trip wallets share=17% of trades"
+          "intensity": 0.1935483870967742,
+          "summary": "round-trip wallets share=19% of trades"
         },
         {
           "name": "price_whips",
@@ -499,21 +499,21 @@
   "lookbackSeconds": 86400,
   "analytics": {
     "marketOverview": {
-      "totalTrades": 214,
-      "totalSize": 34644.02891500002,
-      "totalNotional": 7679.853283999992,
-      "averageSize": 161.88798558411224,
-      "averageNotional": 35.887164878504635,
+      "totalTrades": 216,
+      "totalSize": 34292.99891500002,
+      "totalNotional": 7673.232193999992,
+      "averageSize": 158.76388386574084,
+      "averageNotional": 35.52422312037033,
       "walletCoverage": {
         "uniqueWallets": 134,
         "missingWallets": 0,
         "missingShare": 0.0
       },
       "topWallets": {
-        "tradesTop1": 0.04672897196261682,
-        "tradesTop3": 0.1308411214953271,
-        "notionalTop1": 0.23574669112129373,
-        "notionalTop3": 0.5205484678110684
+        "tradesTop1": 0.046296296296296294,
+        "tradesTop3": 0.12962962962962962,
+        "notionalTop1": 0.23595011257651008,
+        "notionalTop3": 0.5209976394466453
       },
       "largestBySize": {
         "size": 2130.0,
@@ -534,25 +534,25 @@
         "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
         "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
         "outcomeIndex": 0,
-        "tradeCount": 8,
-        "notional": 11.92,
-        "volumeShare": 0.0015521129843500813,
+        "tradeCount": 10,
+        "notional": 14.9,
+        "volumeShare": 0.0019418153423860819,
         "vwap": 0.005,
         "lastPrice": 0.004,
-        "score": 5.624999999999999,
+        "score": 14.500000000000002,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.75,
-            "summary": "wallet concentration top1=25% trades (27% notional), top3=75%"
+            "intensity": 0.6,
+            "summary": "wallet concentration top1=20% trades (22% notional), top3=60%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "min-size trades share=0% over 8 trades"
+            "summary": "min-size trades share=0% over 10 trades"
           },
           {
             "name": "timing_regular",
@@ -564,13 +564,13 @@
             "name": "ping_pong",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "small sample"
+            "summary": "no alternating sequences"
           },
           {
             "name": "round_trips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "small sample"
+            "triggered": true,
+            "intensity": 1.0,
+            "summary": "round-trip wallets share=100% of trades"
           },
           {
             "name": "price_whips",
@@ -586,7 +586,7 @@
         "outcomeIndex": 1,
         "tradeCount": 11,
         "notional": 668.8948140000001,
-        "volumeShare": 0.08709734278303966,
+        "volumeShare": 0.08717249746762985,
         "vwap": 0.9947489666606222,
         "lastPrice": 0.998,
         "score": 5.181818181818181,
@@ -636,7 +636,7 @@
         "outcomeIndex": 1,
         "tradeCount": 13,
         "notional": 523.5711,
-        "volumeShare": 0.06817462269634689,
+        "volumeShare": 0.06823344931610453,
         "vwap": 0.6383923476479626,
         "lastPrice": 0.6,
         "score": 4.961538461538461,
@@ -686,7 +686,7 @@
         "outcomeIndex": 1,
         "tradeCount": 13,
         "notional": 1016.5277619999999,
-        "volumeShare": 0.13236291429131955,
+        "volumeShare": 0.13247712779952936,
         "vwap": 0.9958974534577708,
         "lastPrice": 0.9969999998168945,
         "score": 4.730769230769232,
@@ -736,7 +736,7 @@
         "outcomeIndex": 0,
         "tradeCount": 10,
         "notional": 689.939398,
-        "volumeShare": 0.08983757533980524,
+        "volumeShare": 0.08991509452033672,
         "vwap": 0.21309648944662374,
         "lastPrice": 0.25,
         "score": 4.5,
@@ -786,7 +786,7 @@
         "outcomeIndex": 1,
         "tradeCount": 15,
         "notional": 1069.130999,
-        "volumeShare": 0.13921242495965386,
+        "volumeShare": 0.1393325487838093,
         "vwap": 0.6168987114483009,
         "lastPrice": 0.62,
         "score": 3.4000000000000004,
@@ -836,7 +836,7 @@
         "outcomeIndex": 0,
         "tradeCount": 16,
         "notional": 542.416292,
-        "volumeShare": 0.07062847061545513,
+        "volumeShare": 0.07068941461515228,
         "vwap": 0.4073036986266329,
         "lastPrice": 0.38,
         "score": 3.0,
@@ -886,7 +886,7 @@
         "outcomeIndex": 1,
         "tradeCount": 16,
         "notional": 2491.2229830000006,
-        "volumeShare": 0.32438418949879555,
+        "volumeShare": 0.32466409461035045,
         "vwap": 0.8412166153652293,
         "lastPrice": 0.76,
         "score": 2.90625,
@@ -936,7 +936,7 @@
         "outcomeIndex": 0,
         "tradeCount": 19,
         "notional": 530.1919859999999,
-        "volumeShare": 0.06903673369706011,
+        "volumeShare": 0.06909630421643936,
         "vwap": 0.40565513783536344,
         "lastPrice": 0.4246892596979656,
         "score": 2.6052631578947367,
@@ -985,18 +985,18 @@
         "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
         "outcomeIndex": 0,
         "tradeCount": 93,
-        "notional": 136.03795000000002,
-        "volumeShare": 0.0177136131341751,
-        "vwap": 0.007094247909214787,
-        "lastPrice": 0.004,
-        "score": 1.1451612903225807,
+        "notional": 126.43685999999998,
+        "volumeShare": 0.016477653328263158,
+        "vwap": 0.006936112016273167,
+        "lastPrice": 0.003,
+        "score": 1.2096774193548387,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
             "intensity": 0.07526881720430108,
-            "summary": "wallet concentration top1=3% trades (4% notional), top3=8%"
+            "summary": "wallet concentration top1=3% trades (5% notional), top3=8%"
           },
           {
             "name": "min_size_spam",
@@ -1008,7 +1008,7 @@
             "name": "timing_regular",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "timing CV=2.91, z-score=0.0"
+            "summary": "timing CV=2.92, z-score=1.0"
           },
           {
             "name": "ping_pong",
@@ -1019,8 +1019,8 @@
           {
             "name": "round_trips",
             "triggered": false,
-            "intensity": 0.17204301075268819,
-            "summary": "round-trip wallets share=17% of trades"
+            "intensity": 0.1935483870967742,
+            "summary": "round-trip wallets share=19% of trades"
           },
           {
             "name": "price_whips",
@@ -1033,18 +1033,6 @@
     ],
     "timeseries": {
       "perMinute": [
-        {
-          "timestamp": 1763286480,
-          "iso": "2025-11-16T09:48:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.008
-        },
-        {
-          "timestamp": 1763286840,
-          "iso": "2025-11-16T09:54:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.008
-        },
         {
           "timestamp": 1763287140,
           "iso": "2025-11-16T09:59:00+00:00",
@@ -1990,6 +1978,24 @@
         {
           "timestamp": 1763372580,
           "iso": "2025-11-17T09:43:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004
+        },
+        {
+          "timestamp": 1763372760,
+          "iso": "2025-11-17T09:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006
+        },
+        {
+          "timestamp": 1763372940,
+          "iso": "2025-11-17T09:49:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003
+        },
+        {
+          "timestamp": 1763373120,
+          "iso": "2025-11-17T09:52:00+00:00",
           "tradeCount": 1,
           "vwap": 0.004
         }
