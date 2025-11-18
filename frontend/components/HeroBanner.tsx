@@ -10,6 +10,9 @@ interface HeroBannerProps {
 
 export default function HeroBanner({ entry }: HeroBannerProps) {
   const lookbackHours = entry.lookbackSeconds / 3600;
+  const topSignalsCount = entry.topSignals.length;
+  const primaryTopSignal = topSignalsCount > 0 ? entry.topSignals[0] : null;
+  const additionalSignalCount = Math.max(topSignalsCount - 1, 0);
   return (
     <div
       className={clsx(
@@ -70,7 +73,20 @@ export default function HeroBanner({ entry }: HeroBannerProps) {
           <StatTile label="Slug" value={entry.slug} />
           <StatTile
             label="Top drivers"
-            value={entry.topSignals.length ? entry.topSignals.slice(0, 3).join(" · ") : "Still warming up"}
+            value={
+              primaryTopSignal ? (
+                <>
+                  <span className="block text-white">{primaryTopSignal}</span>
+                  {additionalSignalCount > 0 && (
+                    <span className="mt-2 block text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
+                      +{additionalSignalCount} more signal{additionalSignalCount > 1 ? "s" : ""}
+                    </span>
+                  )}
+                </>
+              ) : (
+                "Still warming up"
+              )
+            }
           />
         </div>
       </div>
