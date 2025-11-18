@@ -51,7 +51,7 @@ python scripts/export_report.py \
 
 The exporter reuses the CLI’s client, honours the same rate-limit defaults (5k rows/page, 0.3 s sleep) and writes both `docs/reports/<slug>.json` and a searchable `docs/reports/index.json`. Add additional `--slug` flags to snapshot multiple markets in one run.
 
-A GitHub Actions workflow (`.github/workflows/export-reports.yml`) refreshes these files every 15 minutes and pushes them to a `reports` branch. Adjust `POLYWATCH_SLUGS`, `POLYWATCH_LOOKBACK`, or the sleep/page parameters in the workflow environment to widen coverage without breaking Polymarket’s 75 req/10 s budget.
+A GitHub Actions workflow (`.github/workflows/export-reports.yml`) refreshes these files every 15 minutes and pushes them to a `reports` branch. Adjust `POLYWATCH_SLUGS`, `POLYWATCH_LOOKBACK`, or the sleep/page parameters in the workflow environment to widen coverage without breaking Polymarket’s 75 req/10 s budget. Vercel builds triggered from the `reports` branch are skipped via `vercel.json` so the JSON-only branch doesn’t spam deploy failures; remove that guard only if the branch ever needs a real frontend build.
 
 ## Live Backend Service
 
