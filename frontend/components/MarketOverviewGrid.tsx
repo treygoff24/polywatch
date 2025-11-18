@@ -106,11 +106,15 @@ function Callout({
   wallet: string | null;
   timestamp: number;
 }) {
+  const walletLabel = formatWallet(wallet);
   return (
     <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/[0.02] p-4">
       <p className="text-xs uppercase tracking-[0.3em] text-neon-cyan">{title}</p>
-      <p className="mt-2 font-mono text-xs text-slate-300/70">
-        {wallet ?? "unknown"}
+      <p
+        className="mt-2 truncate font-mono text-xs text-slate-300/70"
+        title={wallet ?? "unknown"}
+      >
+        {walletLabel}
       </p>
       <p className="mt-3 text-lg font-semibold text-white">{value}</p>
       <p className="text-[0.7rem] text-slate-400">
@@ -125,4 +129,15 @@ function Callout({
       </p>
     </div>
   );
+}
+
+function formatWallet(wallet: string | null) {
+  if (!wallet) {
+    return "unknown";
+  }
+  const trimmed = wallet.trim();
+  if (trimmed.length <= 13) {
+    return trimmed;
+  }
+  return `${trimmed.slice(0, 6)}...${trimmed.slice(-4)}`;
 }
