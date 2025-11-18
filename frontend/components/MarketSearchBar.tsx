@@ -41,7 +41,7 @@ export default function MarketSearchBar({
     [markets]
   );
 
-  const fallbackResults = useMemo(
+  const fallbackResults = useMemo<SearchResult[]>(
     () =>
       markets.slice(0, 6).map((entry) => ({
         slug: entry.slug,
