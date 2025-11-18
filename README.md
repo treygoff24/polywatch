@@ -89,7 +89,7 @@ npm install
 REPORTS_FILE_ROOT=../docs/reports POLYWATCH_BACKEND_URL=http://127.0.0.1:8000 npm run dev
 ```
 
-- `REPORTS_FILE_ROOT` (default: `../docs/reports`) points the server to local JSON. In production, set `REPORTS_BASE_URL` (and `NEXT_PUBLIC_REPORTS_BASE_URL` for client-side fetches) to the hosted snapshots, e.g. a `reports` branch served over GitHub Pages.
+- `REPORTS_FILE_ROOT` (default: `../docs/reports`) points the server to local JSON. In production, set `REPORTS_BASE_URL` (and `NEXT_PUBLIC_REPORTS_BASE_URL` for client-side fetches) to the hosted snapshots, e.g. a `reports` branch served over GitHub Pages. Vercel builds now infer `https://raw.githubusercontent.com/<repo-owner>/<repo-name>/reports/docs/reports` automatically, so you only need to override these variables when hosting the JSON somewhere else (S3, CDN, etc.).
 - `POLYWATCH_BACKEND_URL` must target the FastAPI service so search and manual refreshes work. When unset, only the default Honduras snapshot is available.
 - Production builds now require those remote URLs; copy `frontend/.env.production.example`, update the base URL, and add the variables to Vercel before deploying. The app refuses to fall back to bundled fixtures when `NODE_ENV=production`.
 - `REPORT_STALE_HOURS` (default: `6`) controls when the dashboard shows a stale-data banner if the exporter hasn’t refreshed recently.

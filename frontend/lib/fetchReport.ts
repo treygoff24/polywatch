@@ -8,8 +8,16 @@ type ErrnoException = NodeJS.ErrnoException;
 const DEFAULT_REPORTS_DIR = path.resolve(process.cwd(), "..", "docs", "reports");
 
 const REPORTS_FILE_ROOT = process.env.REPORTS_FILE_ROOT ?? DEFAULT_REPORTS_DIR;
-const REPORTS_BASE_URL =
+const inferredReportsBase =
   process.env.REPORTS_BASE_URL ?? process.env.NEXT_PUBLIC_REPORTS_BASE_URL;
+const repoOwner = process.env.VERCEL_GIT_REPO_OWNER;
+const repoSlug = process.env.VERCEL_GIT_REPO_SLUG;
+const reportsBranchUrl =
+  inferredReportsBase ??
+  (repoOwner && repoSlug
+    ? `https://raw.githubusercontent.com/${repoOwner}/${repoSlug}/reports/docs/reports`
+    : undefined);
+const REPORTS_BASE_URL = reportsBranchUrl;
 const REQUIRE_REMOTE_REPORTS =
   process.env.FORCE_REMOTE_REPORTS === "1" ||
   process.env.NODE_ENV === "production";
