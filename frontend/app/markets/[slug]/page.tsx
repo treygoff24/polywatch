@@ -1,6 +1,7 @@
 import HeroBanner from "@/components/HeroBanner";
 import MarketOverviewGrid from "@/components/MarketOverviewGrid";
 import MarketSearchBar from "@/components/MarketSearchBar";
+import MarketPulseChart from "@/components/MarketPulseChart";
 import OutcomeSnapshotTable from "@/components/OutcomeSnapshotTable";
 import SectionCard from "@/components/SectionCard";
 import Sparkline from "@/components/Sparkline";
@@ -64,6 +65,12 @@ export default async function MarketPage({ params }: MarketPageProps) {
     <main className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
       <div className="flex flex-col gap-10">
         <HeroBanner entry={entry} />
+        <SectionCard
+          title="Market Pulse"
+          subtitle="Live Polymarket price trace across the current window"
+        >
+          <MarketPulseChart data={timeseries as TimeseriesPoint[]} />
+        </SectionCard>
         <MarketSearchBar markets={sortedMarkets} />
         {allowRefresh ? (
           <div>
