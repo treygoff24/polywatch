@@ -65,6 +65,7 @@ jobs:
           fi
           mkdir -p reports-branch/docs/reports
           rsync -a --delete docs/reports/ reports-branch/docs/reports/
+          cp vercel.json reports-branch/
           cd reports-branch
           if git status --porcelain | grep -q .; then
             git add .
