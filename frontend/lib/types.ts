@@ -56,6 +56,7 @@ export interface TimeseriesPoint {
   iso: string;
   tradeCount: number;
   vwap?: number;
+  outcomes?: Record<string, number>;
 }
 
 export interface ReportAnalytics {

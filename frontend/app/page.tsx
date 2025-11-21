@@ -2,6 +2,7 @@ import HeroBanner from "@/components/HeroBanner";
 import MarketOverviewGrid from "@/components/MarketOverviewGrid";
 import MarketSearchBar from "@/components/MarketSearchBar";
 import MarketPulseChart from "@/components/MarketPulseChart";
+import MarketHistoryChart from "@/components/MarketHistoryChart";
 import OutcomeSnapshotTable from "@/components/OutcomeSnapshotTable";
 import SectionCard from "@/components/SectionCard";
 import Sparkline from "@/components/Sparkline";
@@ -70,6 +71,8 @@ export default async function Home() {
             (a, b) => b.score - a.score || b.tradeCount - a.tradeCount
           )}
         />
+
+        <MarketHistoryChart data={timeseries as TimeseriesPoint[]} />
 
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
           <MarketOverviewGrid overview={report.analytics.marketOverview} />

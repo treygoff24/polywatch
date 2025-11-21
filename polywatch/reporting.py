@@ -119,18 +119,31 @@ def _outcome_analytics(report: EventScore) -> List[Dict[str, object]]:
     return outcomes
 
 
-def _timeseries(trades: Sequence[Trade]) -> Dict[str, List[Dict[str, object]]]:
-    minutes, counts = rolling_minutes(trades)
-    vwap_map = vwap_by_minute(trades)
+def _timeseries(report: EventScore) -> Dict[str, List[Dict[str, object]]]:
+    minutes, counts = rolling_minutes(report.trades)
+    vwap_map = vwap_by_minute(report.trades)
+
+    # Pre-calculate VWAP per minute for each outcome
+    outcome_vwaps: Dict[str, Dict[int, float]] = {}
+    for outcome in report.per_outcome:
+        outcome_vwaps[outcome.outcome_label] = vwap_by_minute(outcome.trades)
+
     per_minute: List[Dict[str, object]] = []
     for minute, trade_count in zip(minutes, counts):
         timestamp = minute * 60
+
+        current_outcomes: Dict[str, float] = {}
+        for label, outcome_map in outcome_vwaps.items():
+            if minute in outcome_map:
+                current_outcomes[label] = outcome_map[minute]
+
         per_minute.append(
             {
                 "timestamp": timestamp,
                 "iso": unix_to_iso(timestamp),
                 "tradeCount": trade_count,
                 "vwap": vwap_map.get(minute),
+                "outcomes": current_outcomes,
             }
         )
     return {"perMinute": per_minute}
@@ -198,7 +211,7 @@ class ReportBuilder:
         payload["analytics"] = {
             "marketOverview": _market_overview(report.trades),
             "outcomes": _outcome_analytics(report),
-            "timeseries": _timeseries(report.trades),
+            "timeseries": _timeseries(report),
         }
         summary = _summary_from_report(report, slug, actual_lookback)
         return ReportEnvelope(
