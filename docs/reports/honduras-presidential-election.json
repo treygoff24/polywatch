@@ -4,38 +4,38 @@
     "slug": "honduras-presidential-election",
     "id": 74717
   },
-  "score": 3.3174523570712133,
+  "score": 2.4705882352941178,
   "label": "normal",
   "heuristics": [
     {
       "name": "wallet_concentration",
       "triggered": false,
-      "intensity": 0.3039117352056169,
-      "summary": "wallet concentration top1=18% trades (18% notional), top3=30%"
+      "intensity": 0.19053708439897699,
+      "summary": "wallet concentration top1=9% trades (17% notional), top3=19%"
     },
     {
       "name": "min_size_spam",
       "triggered": false,
-      "intensity": 0.160481444332999,
-      "summary": "min-size trades share=16% over 997 trades"
+      "intensity": 0.1649616368286445,
+      "summary": "min-size trades share=16% over 782 trades"
     },
     {
       "name": "timing_regular",
       "triggered": false,
       "intensity": 0.0,
-      "summary": "timing CV=11.46, z-score=1.0"
+      "summary": "timing CV=8.81, z-score=0.0"
     },
     {
       "name": "ping_pong",
       "triggered": false,
-      "intensity": 0.0,
-      "summary": "no alternating sequences"
+      "intensity": 0.0038363171355498722,
+      "summary": "ping-pong wallets share=0% of trades"
     },
     {
       "name": "round_trips",
       "triggered": false,
-      "intensity": 0.025075225677031094,
-      "summary": "round-trip wallets share=3% of trades"
+      "intensity": 0.011508951406649617,
+      "summary": "round-trip wallets share=1% of trades"
     },
     {
       "name": "price_whips",
@@ -46,9 +46,9 @@
   ],
   "outcomes": [
     {
-      "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
+      "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)",
       "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
-      "outcomeIndex": 0,
+      "outcomeIndex": 1,
       "score": 25.0,
       "labelText": "normal",
       "heuristics": [
@@ -56,58 +56,13 @@
           "name": "wallet_concentration",
           "triggered": true,
           "intensity": 1.0,
-          "summary": "wallet concentration top1=33% trades (50% notional), top3=100%"
+          "summary": "wallet concentration top1=100% trades (100% notional), top3=100%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "min-size trades share=0% over 3 trades"
-        },
-        {
-          "name": "timing_regular",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "not enough trades"
-        },
-        {
-          "name": "ping_pong",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "small sample"
-        },
-        {
-          "name": "round_trips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "small sample"
-        },
-        {
-          "name": "price_whips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "small sample"
-        }
-      ]
-    },
-    {
-      "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
-      "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
-      "outcomeIndex": 0,
-      "score": 5.624999999999999,
-      "labelText": "normal",
-      "heuristics": [
-        {
-          "name": "wallet_concentration",
-          "triggered": false,
-          "intensity": 0.75,
-          "summary": "wallet concentration top1=25% trades (33% notional), top3=75%"
-        },
-        {
-          "name": "min_size_spam",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "min-size trades share=0% over 4 trades"
+          "summary": "min-size trades share=0% over 1 trades"
         },
         {
           "name": "timing_regular",
@@ -139,26 +94,26 @@
       "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)",
       "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
       "outcomeIndex": 1,
-      "score": 5.499999999999999,
+      "score": 4.897058823529411,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.4074074074074074,
-          "summary": "wallet concentration top1=19% trades (47% notional), top3=41%"
+          "intensity": 0.3235294117647059,
+          "summary": "wallet concentration top1=15% trades (53% notional), top3=32%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.4074074074074074,
-          "summary": "min-size trades share=41% over 27 trades"
+          "intensity": 0.38235294117647056,
+          "summary": "min-size trades share=38% over 34 trades"
         },
         {
           "name": "timing_regular",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "timing CV=3.68, z-score=0.0"
+          "summary": "timing CV=2.76, z-score=0.0"
         },
         {
           "name": "ping_pong",
@@ -169,8 +124,8 @@
         {
           "name": "round_trips",
           "triggered": false,
-          "intensity": 0.0,
-          "summary": "no rapid reversals"
+          "intensity": 0.058823529411764705,
+          "summary": "round-trip wallets share=6% of trades"
         },
         {
           "name": "price_whips",
@@ -181,47 +136,92 @@
       ]
     },
     {
-      "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
-      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+      "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
       "outcomeIndex": 0,
-      "score": 4.690773067331671,
+      "score": 4.5,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.6034912718204489,
-          "summary": "wallet concentration top1=45% trades (12% notional), top3=60%"
+          "intensity": 0.6,
+          "summary": "wallet concentration top1=20% trades (25% notional), top3=60%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.02743142144638404,
-          "summary": "min-size trades share=3% over 401 trades"
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 5 trades"
         },
         {
           "name": "timing_regular",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "timing CV=8.06, z-score=0.0"
+          "summary": "not enough trades"
         },
         {
           "name": "ping_pong",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "no alternating sequences"
+          "summary": "small sample"
         },
         {
           "name": "round_trips",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "no rapid reversals"
+          "summary": "small sample"
         },
         {
           "name": "price_whips",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "price whips detected=0"
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
+      "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
+      "outcomeIndex": 0,
+      "score": 4.5,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.6,
+          "summary": "wallet concentration top1=20% trades (33% notional), top3=60%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 5 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
         }
       ]
     },
@@ -229,83 +229,38 @@
       "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
       "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
       "outcomeIndex": 0,
-      "score": 4.350439882697947,
+      "score": 3.906752411575562,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.3020527859237537,
-          "summary": "wallet concentration top1=22% trades (24% notional), top3=30%"
+          "intensity": 0.3022508038585209,
+          "summary": "wallet concentration top1=24% trades (24% notional), top3=30%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.31085043988269795,
-          "summary": "min-size trades share=31% over 341 trades"
+          "intensity": 0.2604501607717042,
+          "summary": "min-size trades share=26% over 311 trades"
         },
         {
           "name": "timing_regular",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "timing CV=6.72, z-score=1.0"
+          "summary": "timing CV=5.55, z-score=0.0"
         },
         {
           "name": "ping_pong",
           "triggered": false,
-          "intensity": 0.0,
-          "summary": "no alternating sequences"
+          "intensity": 0.006430868167202572,
+          "summary": "ping-pong wallets share=1% of trades"
         },
         {
           "name": "round_trips",
           "triggered": false,
-          "intensity": 0.07331378299120235,
-          "summary": "round-trip wallets share=7% of trades"
-        },
-        {
-          "name": "price_whips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "price whips detected=0"
-        }
-      ]
-    },
-    {
-      "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)",
-      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
-      "outcomeIndex": 1,
-      "score": 4.114285714285714,
-      "labelText": "normal",
-      "heuristics": [
-        {
-          "name": "wallet_concentration",
-          "triggered": false,
-          "intensity": 0.42857142857142855,
-          "summary": "wallet concentration top1=31% trades (17% notional), top3=43%"
-        },
-        {
-          "name": "min_size_spam",
-          "triggered": false,
-          "intensity": 0.15,
-          "summary": "min-size trades share=15% over 140 trades"
-        },
-        {
-          "name": "timing_regular",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "timing CV=5.01, z-score=0.0"
-        },
-        {
-          "name": "ping_pong",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "no alternating sequences"
-        },
-        {
-          "name": "round_trips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "no rapid reversals"
+          "intensity": 0.01607717041800643,
+          "summary": "round-trip wallets share=2% of trades"
         },
         {
           "name": "price_whips",
@@ -319,26 +274,71 @@
       "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)",
       "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
       "outcomeIndex": 1,
-      "score": 3.8095238095238093,
+      "score": 3.727272727272727,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.38095238095238093,
-          "summary": "wallet concentration top1=14% trades (24% notional), top3=38%"
+          "intensity": 0.36363636363636365,
+          "summary": "wallet concentration top1=12% trades (26% notional), top3=36%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.15873015873015872,
-          "summary": "min-size trades share=16% over 63 trades"
+          "intensity": 0.16666666666666666,
+          "summary": "min-size trades share=17% over 66 trades"
         },
         {
           "name": "timing_regular",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "timing CV=3.43, z-score=0.0"
+          "summary": "timing CV=2.95, z-score=1.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no rapid reversals"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)",
+      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+      "outcomeIndex": 1,
+      "score": 3.414634146341464,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.35772357723577236,
+          "summary": "wallet concentration top1=22% trades (13% notional), top3=36%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.12195121951219512,
+          "summary": "min-size trades share=12% over 123 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=4.12, z-score=0.0"
         },
         {
           "name": "ping_pong",
@@ -364,20 +364,20 @@
       "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)",
       "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
       "outcomeIndex": 0,
-      "score": 3.25,
+      "score": 2.7857142857142856,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.3888888888888889,
-          "summary": "wallet concentration top1=17% trades (65% notional), top3=39%"
+          "intensity": 0.3333333333333333,
+          "summary": "wallet concentration top1=14% trades (44% notional), top3=33%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.05555555555555555,
-          "summary": "min-size trades share=6% over 18 trades"
+          "intensity": 0.047619047619047616,
+          "summary": "min-size trades share=5% over 21 trades"
         },
         {
           "name": "timing_regular",
@@ -401,7 +401,52 @@
           "name": "price_whips",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "small sample"
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+      "outcomeIndex": 0,
+      "score": 2.5416666666666665,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.3055555555555556,
+          "summary": "wallet concentration top1=21% trades (11% notional), top3=31%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.037037037037037035,
+          "summary": "min-size trades share=4% over 216 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=5.15, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.009259259259259259,
+          "summary": "round-trip wallets share=1% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
         }
       ]
     }
@@ -409,21 +454,21 @@
   "lookbackSeconds": 86400,
   "analytics": {
     "marketOverview": {
-      "totalTrades": 997,
-      "totalSize": 275287.59894900024,
-      "totalNotional": 110293.11033200004,
-      "averageSize": 276.11594678936837,
-      "averageNotional": 110.62498528786364,
+      "totalTrades": 782,
+      "totalSize": 316655.7431360004,
+      "totalNotional": 116617.60939600003,
+      "averageSize": 404.9306178209724,
+      "averageNotional": 149.12737774424556,
       "walletCoverage": {
-        "uniqueWallets": 300,
+        "uniqueWallets": 304,
         "missingWallets": 0,
         "missingShare": 0.0
       },
       "topWallets": {
-        "tradesTop1": 0.18254764292878636,
-        "tradesTop3": 0.3039117352056169,
-        "notionalTop1": 0.17666361836516967,
-        "notionalTop3": 0.4122750891884784
+        "tradesTop1": 0.09462915601023018,
+        "tradesTop3": 0.19053708439897699,
+        "notionalTop1": 0.16708265632367117,
+        "notionalTop3": 0.3899162582264325
       },
       "largestBySize": {
         "size": 28272.85,
@@ -441,14 +486,14 @@
     },
     "outcomes": [
       {
-        "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
+        "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)",
         "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
-        "outcomeIndex": 0,
-        "tradeCount": 3,
-        "notional": 4.0,
-        "volumeShare": 3.62669978927909e-05,
-        "vwap": 0.001,
-        "lastPrice": 0.001,
+        "outcomeIndex": 1,
+        "tradeCount": 1,
+        "notional": 58.941,
+        "volumeShare": 0.0005054210963959416,
+        "vwap": 0.999,
+        "lastPrice": 0.999,
         "score": 25.0,
         "labelText": "normal",
         "heuristics": [
@@ -456,63 +501,13 @@
             "name": "wallet_concentration",
             "triggered": true,
             "intensity": 1.0,
-            "summary": "wallet concentration top1=33% trades (50% notional), top3=100%"
+            "summary": "wallet concentration top1=100% trades (100% notional), top3=100%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "min-size trades share=0% over 3 trades"
-          },
-          {
-            "name": "timing_regular",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "not enough trades"
-          },
-          {
-            "name": "ping_pong",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "small sample"
-          },
-          {
-            "name": "round_trips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "small sample"
-          },
-          {
-            "name": "price_whips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "small sample"
-          }
-        ]
-      },
-      {
-        "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
-        "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
-        "outcomeIndex": 0,
-        "tradeCount": 4,
-        "notional": 6.02,
-        "volumeShare": 5.4581831828650304e-05,
-        "vwap": 0.001,
-        "lastPrice": 0.001,
-        "score": 5.624999999999999,
-        "labelText": "normal",
-        "heuristics": [
-          {
-            "name": "wallet_concentration",
-            "triggered": false,
-            "intensity": 0.75,
-            "summary": "wallet concentration top1=25% trades (33% notional), top3=75%"
-          },
-          {
-            "name": "min_size_spam",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "min-size trades share=0% over 4 trades"
+            "summary": "min-size trades share=0% over 1 trades"
           },
           {
             "name": "timing_regular",
@@ -544,31 +539,31 @@
         "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)",
         "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
         "outcomeIndex": 1,
-        "tradeCount": 27,
-        "notional": 4263.481181999999,
-        "volumeShare": 0.0386559157608869,
-        "vwap": 0.9974119850893604,
+        "tradeCount": 34,
+        "notional": 9168.616662000002,
+        "volumeShare": 0.07862120231659014,
+        "vwap": 0.9982484897268756,
         "lastPrice": 0.997,
-        "score": 5.499999999999999,
+        "score": 4.897058823529411,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.4074074074074074,
-            "summary": "wallet concentration top1=19% trades (47% notional), top3=41%"
+            "intensity": 0.3235294117647059,
+            "summary": "wallet concentration top1=15% trades (53% notional), top3=32%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.4074074074074074,
-            "summary": "min-size trades share=41% over 27 trades"
+            "intensity": 0.38235294117647056,
+            "summary": "min-size trades share=38% over 34 trades"
           },
           {
             "name": "timing_regular",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "timing CV=3.68, z-score=0.0"
+            "summary": "timing CV=2.76, z-score=0.0"
           },
           {
             "name": "ping_pong",
@@ -579,8 +574,8 @@
           {
             "name": "round_trips",
             "triggered": false,
-            "intensity": 0.0,
-            "summary": "no rapid reversals"
+            "intensity": 0.058823529411764705,
+            "summary": "round-trip wallets share=6% of trades"
           },
           {
             "name": "price_whips",
@@ -591,52 +586,102 @@
         ]
       },
       {
-        "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
-        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+        "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
         "outcomeIndex": 0,
-        "tradeCount": 401,
-        "notional": 8477.327057,
-        "volumeShare": 0.07686180062817959,
-        "vwap": 0.1149220535915212,
-        "lastPrice": 0.142,
-        "score": 4.690773067331671,
+        "tradeCount": 5,
+        "notional": 8.0,
+        "volumeShare": 6.860027436194725e-05,
+        "vwap": 0.001,
+        "lastPrice": 0.001,
+        "score": 4.5,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.6034912718204489,
-            "summary": "wallet concentration top1=45% trades (12% notional), top3=60%"
+            "intensity": 0.6,
+            "summary": "wallet concentration top1=20% trades (25% notional), top3=60%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.02743142144638404,
-            "summary": "min-size trades share=3% over 401 trades"
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 5 trades"
           },
           {
             "name": "timing_regular",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "timing CV=8.06, z-score=0.0"
+            "summary": "not enough trades"
           },
           {
             "name": "ping_pong",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "no alternating sequences"
+            "summary": "small sample"
           },
           {
             "name": "round_trips",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "no rapid reversals"
+            "summary": "small sample"
           },
           {
             "name": "price_whips",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "price whips detected=0"
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
+        "outcomeIndex": 0,
+        "tradeCount": 5,
+        "notional": 6.0,
+        "volumeShare": 5.145020577146044e-05,
+        "vwap": 0.001,
+        "lastPrice": 0.001,
+        "score": 4.5,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.6,
+            "summary": "wallet concentration top1=20% trades (33% notional), top3=60%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 5 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
           }
         ]
       },
@@ -644,93 +689,43 @@
         "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
         "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
         "outcomeIndex": 0,
-        "tradeCount": 341,
-        "notional": 77183.45252299999,
-        "volumeShare": 0.6998030275024918,
-        "vwap": 0.8451097233457419,
-        "lastPrice": 0.84,
-        "score": 4.350439882697947,
+        "tradeCount": 311,
+        "notional": 76656.161455,
+        "volumeShare": 0.6573292134183407,
+        "vwap": 0.8439585148471686,
+        "lastPrice": 0.8399999083632298,
+        "score": 3.906752411575562,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.3020527859237537,
-            "summary": "wallet concentration top1=22% trades (24% notional), top3=30%"
+            "intensity": 0.3022508038585209,
+            "summary": "wallet concentration top1=24% trades (24% notional), top3=30%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.31085043988269795,
-            "summary": "min-size trades share=31% over 341 trades"
+            "intensity": 0.2604501607717042,
+            "summary": "min-size trades share=26% over 311 trades"
           },
           {
             "name": "timing_regular",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "timing CV=6.72, z-score=1.0"
+            "summary": "timing CV=5.55, z-score=0.0"
           },
           {
             "name": "ping_pong",
             "triggered": false,
-            "intensity": 0.0,
-            "summary": "no alternating sequences"
+            "intensity": 0.006430868167202572,
+            "summary": "ping-pong wallets share=1% of trades"
           },
           {
             "name": "round_trips",
             "triggered": false,
-            "intensity": 0.07331378299120235,
-            "summary": "round-trip wallets share=7% of trades"
-          },
-          {
-            "name": "price_whips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "price whips detected=0"
-          }
-        ]
-      },
-      {
-        "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)",
-        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
-        "outcomeIndex": 1,
-        "tradeCount": 140,
-        "notional": 18948.991544999997,
-        "volumeShare": 0.17180575910825688,
-        "vwap": 0.9036359580166614,
-        "lastPrice": 0.877,
-        "score": 4.114285714285714,
-        "labelText": "normal",
-        "heuristics": [
-          {
-            "name": "wallet_concentration",
-            "triggered": false,
-            "intensity": 0.42857142857142855,
-            "summary": "wallet concentration top1=31% trades (17% notional), top3=43%"
-          },
-          {
-            "name": "min_size_spam",
-            "triggered": false,
-            "intensity": 0.15,
-            "summary": "min-size trades share=15% over 140 trades"
-          },
-          {
-            "name": "timing_regular",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "timing CV=5.01, z-score=0.0"
-          },
-          {
-            "name": "ping_pong",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "no alternating sequences"
-          },
-          {
-            "name": "round_trips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "no rapid reversals"
+            "intensity": 0.01607717041800643,
+            "summary": "round-trip wallets share=2% of trades"
           },
           {
             "name": "price_whips",
@@ -744,31 +739,81 @@
         "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)",
         "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
         "outcomeIndex": 1,
-        "tradeCount": 63,
-        "notional": 1288.325295,
-        "volumeShare": 0.011680922689748555,
-        "vwap": 0.09973915280866655,
-        "lastPrice": 0.15,
-        "score": 3.8095238095238093,
+        "tradeCount": 66,
+        "notional": 1423.1906949999998,
+        "volumeShare": 0.012203909018296297,
+        "vwap": 0.0967745713097441,
+        "lastPrice": 0.17,
+        "score": 3.727272727272727,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.38095238095238093,
-            "summary": "wallet concentration top1=14% trades (24% notional), top3=38%"
+            "intensity": 0.36363636363636365,
+            "summary": "wallet concentration top1=12% trades (26% notional), top3=36%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.15873015873015872,
-            "summary": "min-size trades share=16% over 63 trades"
+            "intensity": 0.16666666666666666,
+            "summary": "min-size trades share=17% over 66 trades"
           },
           {
             "name": "timing_regular",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "timing CV=3.43, z-score=0.0"
+            "summary": "timing CV=2.95, z-score=1.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no rapid reversals"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
+        "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)",
+        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+        "outcomeIndex": 1,
+        "tradeCount": 123,
+        "notional": 20403.768650999995,
+        "volumeShare": 0.17496301593453725,
+        "vwap": 0.9046668068044721,
+        "lastPrice": 0.8589999848830168,
+        "score": 3.414634146341464,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.35772357723577236,
+            "summary": "wallet concentration top1=22% trades (13% notional), top3=36%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.12195121951219512,
+            "summary": "min-size trades share=12% over 123 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=4.12, z-score=0.0"
           },
           {
             "name": "ping_pong",
@@ -794,25 +839,25 @@
         "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)",
         "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
         "outcomeIndex": 0,
-        "tradeCount": 18,
-        "notional": 121.51272999999998,
-        "volumeShare": 0.0011017254807143173,
-        "vwap": 0.001959535082485365,
+        "tradeCount": 21,
+        "notional": 178.03228,
+        "volumeShare": 0.0015266329066603768,
+        "vwap": 0.001953805487617643,
         "lastPrice": 0.002,
-        "score": 3.25,
+        "score": 2.7857142857142856,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.3888888888888889,
-            "summary": "wallet concentration top1=17% trades (65% notional), top3=39%"
+            "intensity": 0.3333333333333333,
+            "summary": "wallet concentration top1=14% trades (44% notional), top3=33%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.05555555555555555,
-            "summary": "min-size trades share=6% over 18 trades"
+            "intensity": 0.047619047619047616,
+            "summary": "min-size trades share=5% over 21 trades"
           },
           {
             "name": "timing_regular",
@@ -836,283 +881,63 @@
             "name": "price_whips",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "small sample"
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
+        "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+        "outcomeIndex": 0,
+        "tradeCount": 216,
+        "notional": 8714.898652999991,
+        "volumeShare": 0.07473055482904549,
+        "vwap": 0.11744860223192115,
+        "lastPrice": 0.1687964089643841,
+        "score": 2.5416666666666665,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.3055555555555556,
+            "summary": "wallet concentration top1=21% trades (11% notional), top3=31%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.037037037037037035,
+            "summary": "min-size trades share=4% over 216 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=5.15, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.009259259259259259,
+            "summary": "round-trip wallets share=1% of trades"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
           }
         ]
       }
     ],
     "timeseries": {
       "perMinute": [
-        {
-          "timestamp": 1764985680,
-          "iso": "2025-12-06T01:48:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.9299997116995128,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299997116995128
-          }
-        },
-        {
-          "timestamp": 1764986040,
-          "iso": "2025-12-06T01:54:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.9299999153699907,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299999153699907
-          }
-        },
-        {
-          "timestamp": 1764986220,
-          "iso": "2025-12-06T01:57:00+00:00",
-          "tradeCount": 3,
-          "vwap": 0.0771149497884166,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.0771149497884166
-          }
-        },
-        {
-          "timestamp": 1764986280,
-          "iso": "2025-12-06T01:58:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.929999996318547,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.929999996318547
-          }
-        },
-        {
-          "timestamp": 1764986700,
-          "iso": "2025-12-06T02:05:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.922,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.922
-          }
-        },
-        {
-          "timestamp": 1764987120,
-          "iso": "2025-12-06T02:12:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.078,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.078
-          }
-        },
-        {
-          "timestamp": 1764987240,
-          "iso": "2025-12-06T02:14:00+00:00",
-          "tradeCount": 16,
-          "vwap": 0.07799999999999999,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07799999999999999
-          }
-        },
-        {
-          "timestamp": 1764987300,
-          "iso": "2025-12-06T02:15:00+00:00",
-          "tradeCount": 19,
-          "vwap": 0.07825076315789471,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07825076315789471
-          }
-        },
-        {
-          "timestamp": 1764987360,
-          "iso": "2025-12-06T02:16:00+00:00",
-          "tradeCount": 30,
-          "vwap": 0.43832446445626977,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07947619047619048,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9200000000000003
-          }
-        },
-        {
-          "timestamp": 1764987420,
-          "iso": "2025-12-06T02:17:00+00:00",
-          "tradeCount": 27,
-          "vwap": 0.07942422222222223,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07942422222222223
-          }
-        },
-        {
-          "timestamp": 1764987480,
-          "iso": "2025-12-06T02:18:00+00:00",
-          "tradeCount": 34,
-          "vwap": 0.1294411764705882,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08003125000000003,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9200000000000002
-          }
-        },
-        {
-          "timestamp": 1764987540,
-          "iso": "2025-12-06T02:19:00+00:00",
-          "tradeCount": 29,
-          "vwap": 0.08048275862068967,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08048275862068967
-          }
-        },
-        {
-          "timestamp": 1764987600,
-          "iso": "2025-12-06T02:20:00+00:00",
-          "tradeCount": 34,
-          "vwap": 0.15132467532467533,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08045390070921987,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
-          }
-        },
-        {
-          "timestamp": 1764987660,
-          "iso": "2025-12-06T02:21:00+00:00",
-          "tradeCount": 7,
-          "vwap": 0.08071428571428572,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08071428571428572
-          }
-        },
-        {
-          "timestamp": 1764987720,
-          "iso": "2025-12-06T02:22:00+00:00",
-          "tradeCount": 5,
-          "vwap": 0.08006388206388206,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08006824146981627,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.08
-          }
-        },
-        {
-          "timestamp": 1764988020,
-          "iso": "2025-12-06T02:27:00+00:00",
-          "tradeCount": 2,
-          "vwap": 0.9299997550997378,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299997550997378
-          }
-        },
-        {
-          "timestamp": 1764988860,
-          "iso": "2025-12-06T02:41:00+00:00",
-          "tradeCount": 2,
-          "vwap": 0.07235803189684031,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07235803189684031
-          }
-        },
-        {
-          "timestamp": 1764988920,
-          "iso": "2025-12-06T02:42:00+00:00",
-          "tradeCount": 10,
-          "vwap": 0.9299997116995127,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299997116995127
-          }
-        },
-        {
-          "timestamp": 1764989220,
-          "iso": "2025-12-06T02:47:00+00:00",
-          "tradeCount": 11,
-          "vwap": 0.9213098585532477,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9213098585532477
-          }
-        },
-        {
-          "timestamp": 1764989280,
-          "iso": "2025-12-06T02:48:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.9299999932363631,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299999932363631
-          }
-        },
-        {
-          "timestamp": 1764989520,
-          "iso": "2025-12-06T02:52:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.92,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
-          }
-        },
-        {
-          "timestamp": 1764989640,
-          "iso": "2025-12-06T02:54:00+00:00",
-          "tradeCount": 10,
-          "vwap": 0.004939353963097671,
-          "outcomes": {
-            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001,
-            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.001,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299997116995127
-          }
-        },
-        {
-          "timestamp": 1764989700,
-          "iso": "2025-12-06T02:55:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.002,
-          "outcomes": {
-            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.002
-          }
-        },
-        {
-          "timestamp": 1764989760,
-          "iso": "2025-12-06T02:56:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.9299997984999093,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299997984999093
-          }
-        },
-        {
-          "timestamp": 1764990120,
-          "iso": "2025-12-06T03:02:00+00:00",
-          "tradeCount": 2,
-          "vwap": 0.0695,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.069,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07
-          }
-        },
-        {
-          "timestamp": 1764990240,
-          "iso": "2025-12-06T03:04:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.92,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
-          }
-        },
-        {
-          "timestamp": 1764990300,
-          "iso": "2025-12-06T03:05:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.92,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
-          }
-        },
-        {
-          "timestamp": 1764990840,
-          "iso": "2025-12-06T03:14:00+00:00",
-          "tradeCount": 2,
-          "vwap": 0.843098236092266,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.069,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
-          }
-        },
-        {
-          "timestamp": 1764990960,
-          "iso": "2025-12-06T03:16:00+00:00",
-          "tradeCount": 2,
-          "vwap": 0.08023063540063415,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08035235858590012,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.08
-          }
-        },
         {
           "timestamp": 1764991020,
           "iso": "2025-12-06T03:17:00+00:00",
@@ -1182,8 +1007,8 @@
           "tradeCount": 2,
           "vwap": 0.08050000180327557,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08099999635904997,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.08
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.08,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.08099999635904997
           }
         },
         {
@@ -1210,8 +1035,8 @@
           "tradeCount": 3,
           "vwap": 0.3920544848755258,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.061867836226120757,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.930058386786663
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.930058386786663,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.061867836226120757
           }
         },
         {
@@ -1248,9 +1073,9 @@
           "tradeCount": 4,
           "vwap": 0.8050374261081236,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.061,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.93,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9399320897141176
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9399320897141176,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.061
           }
         },
         {
@@ -1287,8 +1112,8 @@
           "tradeCount": 3,
           "vwap": 0.06988167485708412,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.0698126844077301,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.0698126844077301
           }
         },
         {
@@ -1433,10 +1258,10 @@
           "tradeCount": 8,
           "vwap": 0.5006092601670162,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06180580214698136,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.94,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.06,
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.939,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.06
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06180580214698136
           }
         },
         {
@@ -1454,8 +1279,8 @@
           "tradeCount": 4,
           "vwap": 0.1357398572763522,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.05499996936499868,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.945
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.945,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.05499996936499868
           }
         },
         {
@@ -1712,8 +1537,8 @@
           "tradeCount": 3,
           "vwap": 0.43280819514248536,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.056,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9325402796971625
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9325402796971625,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.056
           }
         },
         {
@@ -1768,10 +1593,10 @@
           "vwap": 0.6674671971454452,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.999,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9399999990599994,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.06993671038157656,
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.94,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.06993671038157656
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06
           }
         },
         {
@@ -1808,11 +1633,11 @@
           "vwap": 0.42064743589743586,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.999,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.94,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.94,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.05999999999999999,
-            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.94,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06
           }
         },
         {
@@ -1840,8 +1665,8 @@
           "tradeCount": 2,
           "vwap": 0.5907324516785352,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.93
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.93,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06
           }
         },
         {
@@ -1913,9 +1738,9 @@
           "tradeCount": 3,
           "vwap": 0.19939979825151313,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.069809,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.93,
-            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.069809
           }
         },
         {
@@ -1951,9 +1776,9 @@
           "tradeCount": 3,
           "vwap": 0.31174057112690595,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06999999390999992,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.93,
-            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06999999390999992
           }
         },
         {
@@ -2022,8 +1847,8 @@
           "tradeCount": 2,
           "vwap": 0.001,
           "outcomes": {
-            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001,
-            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.001
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001
           }
         },
         {
@@ -2032,8 +1857,8 @@
           "tradeCount": 2,
           "vwap": 0.9034535072307069,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.068,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9325483216783217
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9325483216783217,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.068
           }
         },
         {
@@ -2271,10 +2096,10 @@
           "tradeCount": 4,
           "vwap": 0.2900173095125884,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.060427609304294035,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9300243725071353,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07,
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9304430769230769,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.060427609304294035
           }
         },
         {
@@ -2503,8 +2328,8 @@
           "tradeCount": 2,
           "vwap": 0.07207984532170299,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.0672862928075069,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.933
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.933,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.0672862928075069
           }
         },
         {
@@ -2519,6 +2344,100 @@
         {
           "timestamp": 1765025220,
           "iso": "2025-12-06T12:47:00+00:00",
+          "tradeCount": 4,
+          "vwap": 0.0013268289371808207,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06799993825599432
+          }
+        },
+        {
+          "timestamp": 1765025280,
+          "iso": "2025-12-06T12:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9299999299667671,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299999299667671
+          }
+        },
+        {
+          "timestamp": 1765025520,
+          "iso": "2025-12-06T12:52:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9299999602089528,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299999602089528
+          }
+        },
+        {
+          "timestamp": 1765025640,
+          "iso": "2025-12-06T12:54:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.08,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.08
+          }
+        },
+        {
+          "timestamp": 1765025760,
+          "iso": "2025-12-06T12:56:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9199999999999999,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9199999999999999
+          }
+        },
+        {
+          "timestamp": 1765026000,
+          "iso": "2025-12-06T13:00:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.934,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.934
+          }
+        },
+        {
+          "timestamp": 1765026060,
+          "iso": "2025-12-06T13:01:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.6017117903719885,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9249999999999999,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06764856580030994
+          }
+        },
+        {
+          "timestamp": 1765026240,
+          "iso": "2025-12-06T13:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.066,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.066
+          }
+        },
+        {
+          "timestamp": 1765026540,
+          "iso": "2025-12-06T13:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.92,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
+          }
+        },
+        {
+          "timestamp": 1765027440,
+          "iso": "2025-12-06T13:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001
+          }
+        },
+        {
+          "timestamp": 1765027500,
+          "iso": "2025-12-06T13:25:00+00:00",
           "tradeCount": 1,
           "vwap": 0.001,
           "outcomes": {
@@ -2526,61 +2445,137 @@
           }
         },
         {
-          "timestamp": 1765060860,
-          "iso": "2025-12-06T22:41:00+00:00",
-          "tradeCount": 17,
-          "vwap": 0.9039999981232388,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9039999981232388
-          }
-        },
-        {
-          "timestamp": 1765061100,
-          "iso": "2025-12-06T22:45:00+00:00",
-          "tradeCount": 7,
-          "vwap": 0.22059902367158632,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10615847917989057,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9049440936298938
-          }
-        },
-        {
-          "timestamp": 1765061160,
-          "iso": "2025-12-06T22:46:00+00:00",
-          "tradeCount": 15,
-          "vwap": 0.3703996350736767,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10909483526218675,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8963120726293236,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.13
-          }
-        },
-        {
-          "timestamp": 1765061280,
-          "iso": "2025-12-06T22:48:00+00:00",
+          "timestamp": 1765027560,
+          "iso": "2025-12-06T13:26:00+00:00",
           "tradeCount": 1,
-          "vwap": 0.10900000000000001,
+          "vwap": 0.9399999661599878,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10900000000000001
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9399999661599878
           }
         },
         {
-          "timestamp": 1765061340,
-          "iso": "2025-12-06T22:49:00+00:00",
+          "timestamp": 1765027680,
+          "iso": "2025-12-06T13:28:00+00:00",
           "tradeCount": 1,
-          "vwap": 0.109,
+          "vwap": 0.001,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.109
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.001
+          }
+        },
+        {
+          "timestamp": 1765027740,
+          "iso": "2025-12-06T13:29:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.001
+          }
+        },
+        {
+          "timestamp": 1765028040,
+          "iso": "2025-12-06T13:34:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.06699999390299995,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06699999390299995
+          }
+        },
+        {
+          "timestamp": 1765028400,
+          "iso": "2025-12-06T13:40:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9399999741960741,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9399999741960741
+          }
+        },
+        {
+          "timestamp": 1765028520,
+          "iso": "2025-12-06T13:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.92,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.92
+          }
+        },
+        {
+          "timestamp": 1765028640,
+          "iso": "2025-12-06T13:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.066,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.066
+          }
+        },
+        {
+          "timestamp": 1765029660,
+          "iso": "2025-12-06T14:01:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.9313308849446122,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9313308849446122
+          }
+        },
+        {
+          "timestamp": 1765029780,
+          "iso": "2025-12-06T14:03:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9200000000000002,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9200000000000002
+          }
+        },
+        {
+          "timestamp": 1765029960,
+          "iso": "2025-12-06T14:06:00+00:00",
+          "tradeCount": 6,
+          "vwap": 0.560758523062404,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.93,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9289999999999999,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07
+          }
+        },
+        {
+          "timestamp": 1765030140,
+          "iso": "2025-12-06T14:09:00+00:00",
+          "tradeCount": 5,
+          "vwap": 0.48261754775928395,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.9990000000000001,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07525040092568158,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07094286847448718
+          }
+        },
+        {
+          "timestamp": 1765030260,
+          "iso": "2025-12-06T14:11:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.7534616809082666,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.999,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.07700000009738235
+          }
+        },
+        {
+          "timestamp": 1765030500,
+          "iso": "2025-12-06T14:15:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.9300000000000002,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9300000000000002
           }
         },
         {
           "timestamp": 1765061400,
           "iso": "2025-12-06T22:50:00+00:00",
           "tradeCount": 14,
-          "vwap": 0.24827224447402613,
+          "vwap": 0.24827224447402615,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10999986315789474,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9063014249033313
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9063014249033313,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10999986315789474
           }
         },
         {
@@ -2589,8 +2584,8 @@
           "tradeCount": 36,
           "vwap": 0.4256300763269681,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10949976551050318,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9088706508862366
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9088706508862366,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10949976551050318
           }
         },
         {
@@ -2599,9 +2594,9 @@
           "tradeCount": 24,
           "vwap": 0.36874192301061404,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10961035137942389,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8700000000000001,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9050370331852717
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9050370331852717,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10961035137942389
           }
         },
         {
@@ -2611,10 +2606,10 @@
           "vwap": 0.21840521392550066,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.9990000000000001,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.12276843999999999,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8764321359955762,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.13725867569503225,
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8871038409991766,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.13725867569503225
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.12276843999999999
           }
         },
         {
@@ -2623,9 +2618,9 @@
           "tradeCount": 5,
           "vwap": 0.503562965835126,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10999999999999999,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8782435129530162,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.14000000000000004
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.14000000000000004,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10999999999999999
           }
         },
         {
@@ -2644,8 +2639,8 @@
           "tradeCount": 18,
           "vwap": 0.7296308755395166,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14252770112729685,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8101802553673751
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8101802553673751,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14252770112729685
           }
         },
         {
@@ -2675,8 +2670,8 @@
           "tradeCount": 2,
           "vwap": 0.7198114331083763,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.147,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.147
           }
         },
         {
@@ -2685,8 +2680,8 @@
           "tradeCount": 2,
           "vwap": 0.11594299666146453,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10276959244047008,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8299999954327163
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8299999954327163,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.10276959244047008
           }
         },
         {
@@ -2696,10 +2691,10 @@
           "vwap": 0.774210046951302,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.9985768519270748,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13815068493150687,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8563118826470371,
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8689999999688639,
-            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.003
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13815068493150687
           }
         },
         {
@@ -2708,11 +2703,11 @@
           "tradeCount": 5,
           "vwap": 0.06878531162144326,
           "outcomes": {
-            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001,
             "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.001,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1407137,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.001,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.83,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.859
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.859,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1407137
           }
         },
         {
@@ -2741,8 +2736,8 @@
           "tradeCount": 2,
           "vwap": 0.5341717664393859,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13844807097800996,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13844807097800996
           }
         },
         {
@@ -2760,8 +2755,8 @@
           "tradeCount": 3,
           "vwap": 0.5400135680590484,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13634593698175787,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8299999990310419
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8299999990310419,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13634593698175787
           }
         },
         {
@@ -2817,9 +2812,9 @@
           "vwap": 0.2375082302692075,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.996,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1476687784679089,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8181303631335711,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.18
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.18,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1476687784679089
           }
         },
         {
@@ -2837,8 +2832,8 @@
           "tradeCount": 2,
           "vwap": 0.489,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.148,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.83
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.83,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.148
           }
         },
         {
@@ -2847,8 +2842,8 @@
           "tradeCount": 3,
           "vwap": 0.7027613104524181,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.853,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.17
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.17,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.853
           }
         },
         {
@@ -2858,8 +2853,8 @@
           "vwap": 0.6660783844370985,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.996,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14999733170643406,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14999733170643406
           }
         },
         {
@@ -2913,8 +2908,8 @@
           "tradeCount": 2,
           "vwap": 0.7661471014492754,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.178,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.81209609375
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.81209609375,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.178
           }
         },
         {
@@ -2923,8 +2918,8 @@
           "tradeCount": 3,
           "vwap": 0.33938739819368235,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18006462221318878,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.825
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.825,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18006462221318878
           }
         },
         {
@@ -2933,8 +2928,8 @@
           "tradeCount": 3,
           "vwap": 0.6907055183185927,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.2032608668416824,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8064193091524544
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8064193091524544,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.2032608668416824
           }
         },
         {
@@ -2953,9 +2948,9 @@
           "tradeCount": 6,
           "vwap": 0.6753668681426018,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.204,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.7597382501122759,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.22000000000000003
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.22000000000000003,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.204
           }
         },
         {
@@ -2964,8 +2959,8 @@
           "tradeCount": 3,
           "vwap": 0.21269069982399746,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.2054874542767322,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.7917526167606783
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.7917526167606783,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.2054874542767322
           }
         },
         {
@@ -2974,8 +2969,8 @@
           "tradeCount": 3,
           "vwap": 0.3165277534582385,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.20938650306748469,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.79
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.79,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.20938650306748469
           }
         },
         {
@@ -2993,18 +2988,18 @@
           "tradeCount": 3,
           "vwap": 0.22205524682741304,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.20810248900859388,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.20810248900859388
           }
         },
         {
           "timestamp": 1765064340,
           "iso": "2025-12-06T23:39:00+00:00",
           "tradeCount": 12,
-          "vwap": 0.691059340241435,
+          "vwap": 0.6910593402414351,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.2089999939596082,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.7580824231677195
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.7580824231677197,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.2089999939596082
           }
         },
         {
@@ -3059,9 +3054,9 @@
           "tradeCount": 4,
           "vwap": 0.7587163884034603,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.17699997368819723,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.7650015918780867,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8469998721025077
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8469998721025077,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.17699997368819723
           }
         },
         {
@@ -3100,8 +3095,8 @@
           "tradeCount": 8,
           "vwap": 0.4881636848880607,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.16074882416049688,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8365999999999999
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8365999999999999,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.16074882416049688
           }
         },
         {
@@ -3110,9 +3105,9 @@
           "tradeCount": 3,
           "vwap": 0.6183732205644629,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18317592129347668,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.78,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8011076595744681
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8011076595744681,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18317592129347668
           }
         },
         {
@@ -3121,8 +3116,8 @@
           "tradeCount": 5,
           "vwap": 0.5548770940444276,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18347463143787096,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.7740713078071011
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.7740713078071011,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18347463143787096
           }
         },
         {
@@ -3132,8 +3127,8 @@
           "vwap": 0.5626188922954988,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.998,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.16868876226197346,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.779999996766224
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.779999996766224,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.16868876226197346
           }
         },
         {
@@ -3142,8 +3137,8 @@
           "tradeCount": 2,
           "vwap": 0.3131817369948649,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.179,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.78
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.78,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.179
           }
         },
         {
@@ -3198,8 +3193,8 @@
           "tradeCount": 5,
           "vwap": 0.7362315735733145,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8170431644589243
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8170431644589243,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.18
           }
         },
         {
@@ -3245,9 +3240,9 @@
           "tradeCount": 4,
           "vwap": 0.4942307077287534,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14623064220183488,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8304775771694817,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.16
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.16,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14623064220183488
           }
         },
         {
@@ -3256,8 +3251,8 @@
           "tradeCount": 4,
           "vwap": 0.5668146372874706,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13615855703824076,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.865310606498195
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.865310606498195,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13615855703824076
           }
         },
         {
@@ -3293,8 +3288,8 @@
           "tradeCount": 3,
           "vwap": 0.7976241339491915,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.141,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.84
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.84,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.141
           }
         },
         {
@@ -3321,8 +3316,8 @@
           "tradeCount": 2,
           "vwap": 0.20936814910902965,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.134,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8499999149996685
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8499999149996685,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.134
           }
         },
         {
@@ -3331,9 +3326,9 @@
           "tradeCount": 3,
           "vwap": 0.10129279476620227,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1278906725245015,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15,
-            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.002
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.002,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1278906725245015
           }
         },
         {
@@ -3416,8 +3411,8 @@
           "tradeCount": 4,
           "vwap": 0.1271308854012437,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.12299999999999998,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.12299999999999998
           }
         },
         {
@@ -3445,8 +3440,8 @@
           "tradeCount": 4,
           "vwap": 0.17987712665406427,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.18
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.18,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13
           }
         },
         {
@@ -3501,8 +3496,8 @@
           "vwap": 0.17803488579490143,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.998,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14842608810029836,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.16
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.16,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14842608810029836
           }
         },
         {
@@ -3538,8 +3533,8 @@
           "tradeCount": 2,
           "vwap": 0.7636693986549189,
           "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14899997899099876,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8514851480933242
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8514851480933242,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14899997899099876
           }
         },
         {
@@ -3558,8 +3553,8 @@
           "vwap": 0.3068071273328321,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.9970000000000001,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14844752449996745,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14844752449996745
           }
         },
         {
@@ -3569,8 +3564,8 @@
           "vwap": 0.2841922033569238,
           "outcomes": {
             "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.9970000000000001,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1555858878887655,
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.15,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1555858878887655
           }
         },
         {
@@ -3625,6 +3620,289 @@
           "vwap": 0.8399999948307681,
           "outcomes": {
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8399999948307681
+          }
+        },
+        {
+          "timestamp": 1765071900,
+          "iso": "2025-12-07T01:45:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.997,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.997
+          }
+        },
+        {
+          "timestamp": 1765072080,
+          "iso": "2025-12-07T01:48:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.13240365415057487,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13240365415057487
+          }
+        },
+        {
+          "timestamp": 1765072320,
+          "iso": "2025-12-07T01:52:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8399999931428546,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8399999931428546
+          }
+        },
+        {
+          "timestamp": 1765072440,
+          "iso": "2025-12-07T01:54:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.14,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.14
+          }
+        },
+        {
+          "timestamp": 1765072560,
+          "iso": "2025-12-07T01:56:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.15001557177615574,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.15001557177615574
+          }
+        },
+        {
+          "timestamp": 1765072680,
+          "iso": "2025-12-07T01:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.15,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.15
+          }
+        },
+        {
+          "timestamp": 1765073280,
+          "iso": "2025-12-07T02:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.83,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.83
+          }
+        },
+        {
+          "timestamp": 1765073340,
+          "iso": "2025-12-07T02:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.15,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.15
+          }
+        },
+        {
+          "timestamp": 1765073520,
+          "iso": "2025-12-07T02:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8399999551999426,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8399999551999426
+          }
+        },
+        {
+          "timestamp": 1765073640,
+          "iso": "2025-12-07T02:14:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.85,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.85
+          }
+        },
+        {
+          "timestamp": 1765073700,
+          "iso": "2025-12-07T02:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8629999798097144,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8629999798097144
+          }
+        },
+        {
+          "timestamp": 1765073760,
+          "iso": "2025-12-07T02:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8636003401360546,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8636003401360546
+          }
+        },
+        {
+          "timestamp": 1765074060,
+          "iso": "2025-12-07T02:21:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.137,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.137
+          }
+        },
+        {
+          "timestamp": 1765074180,
+          "iso": "2025-12-07T02:23:00+00:00",
+          "tradeCount": 4,
+          "vwap": 0.803978666571677,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8187420018462072,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.17
+          }
+        },
+        {
+          "timestamp": 1765074240,
+          "iso": "2025-12-07T02:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.13765651118899974,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.13765651118899974
+          }
+        },
+        {
+          "timestamp": 1765074480,
+          "iso": "2025-12-07T02:28:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.997,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.997
+          }
+        },
+        {
+          "timestamp": 1765074600,
+          "iso": "2025-12-07T02:30:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.995,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.995
+          }
+        },
+        {
+          "timestamp": 1765074660,
+          "iso": "2025-12-07T02:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.15210310988586737,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.15210310988586737
+          }
+        },
+        {
+          "timestamp": 1765074720,
+          "iso": "2025-12-07T02:32:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.82,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.82
+          }
+        },
+        {
+          "timestamp": 1765074900,
+          "iso": "2025-12-07T02:35:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.83,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.83
+          }
+        },
+        {
+          "timestamp": 1765075620,
+          "iso": "2025-12-07T02:47:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8299999377499943,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8299999377499943
+          }
+        },
+        {
+          "timestamp": 1765075680,
+          "iso": "2025-12-07T02:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.153,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.153
+          }
+        },
+        {
+          "timestamp": 1765075800,
+          "iso": "2025-12-07T02:50:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.153,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.153
+          }
+        },
+        {
+          "timestamp": 1765075980,
+          "iso": "2025-12-07T02:53:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.995,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.995
+          }
+        },
+        {
+          "timestamp": 1765076340,
+          "iso": "2025-12-07T02:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.997,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.997
+          }
+        },
+        {
+          "timestamp": 1765076940,
+          "iso": "2025-12-07T03:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.137,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.137
+          }
+        },
+        {
+          "timestamp": 1765077000,
+          "iso": "2025-12-07T03:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.002016298029176618,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.002016298029176618
+          }
+        },
+        {
+          "timestamp": 1765077060,
+          "iso": "2025-12-07T03:11:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.002,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.002
+          }
+        },
+        {
+          "timestamp": 1765077180,
+          "iso": "2025-12-07T03:13:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.16868075918527828,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8589999848830168,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1623779966212094
+          }
+        },
+        {
+          "timestamp": 1765077240,
+          "iso": "2025-12-07T03:14:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.2621247424751248,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.999,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.8399999083632297,
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.1687964089643841
+          }
+        },
+        {
+          "timestamp": 1765077300,
+          "iso": "2025-12-07T03:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8589999848830168,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.8589999848830168
           }
         }
       ]
