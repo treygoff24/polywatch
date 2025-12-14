@@ -4,20 +4,20 @@
     "slug": "honduras-presidential-election",
     "id": 74717
   },
-  "score": 3.5483383685800605,
+  "score": 3.566465256797583,
   "label": "normal",
   "heuristics": [
     {
       "name": "wallet_concentration",
       "triggered": false,
       "intensity": 0.30513595166163143,
-      "summary": "wallet concentration top1=22% trades (16% notional), top3=31%"
+      "summary": "wallet concentration top1=22% trades (15% notional), top3=31%"
     },
     {
       "name": "min_size_spam",
       "triggered": false,
-      "intensity": 0.1933534743202417,
-      "summary": "min-size trades share=19% over 331 trades"
+      "intensity": 0.19637462235649547,
+      "summary": "min-size trades share=20% over 331 trades"
     },
     {
       "name": "timing_regular",
@@ -184,26 +184,26 @@
       "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)",
       "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
       "outcomeIndex": 1,
-      "score": 5.28125,
+      "score": 5.173469387755103,
       "labelText": "normal",
       "heuristics": [
         {
           "name": "wallet_concentration",
           "triggered": false,
-          "intensity": 0.5208333333333334,
-          "summary": "wallet concentration top1=25% trades (30% notional), top3=52%"
+          "intensity": 0.5102040816326531,
+          "summary": "wallet concentration top1=24% trades (35% notional), top3=51%"
         },
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.16666666666666666,
-          "summary": "min-size trades share=17% over 48 trades"
+          "intensity": 0.16326530612244897,
+          "summary": "min-size trades share=16% over 49 trades"
         },
         {
           "name": "timing_regular",
           "triggered": false,
           "intensity": 0.0,
-          "summary": "timing CV=1.48, z-score=0.0"
+          "summary": "timing CV=1.47, z-score=0.0"
         },
         {
           "name": "ping_pong",
@@ -214,7 +214,7 @@
         {
           "name": "round_trips",
           "triggered": false,
-          "intensity": 0.125,
+          "intensity": 0.12244897959183673,
           "summary": "round-trip wallets share=12% of trades"
         },
         {
@@ -274,7 +274,7 @@
       "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
       "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
       "outcomeIndex": 0,
-      "score": 4.684782608695652,
+      "score": 4.728260869565218,
       "labelText": "normal",
       "heuristics": [
         {
@@ -286,8 +286,8 @@
         {
           "name": "min_size_spam",
           "triggered": false,
-          "intensity": 0.34057971014492755,
-          "summary": "min-size trades share=34% over 138 trades"
+          "intensity": 0.34782608695652173,
+          "summary": "min-size trades share=35% over 138 trades"
         },
         {
           "name": "timing_regular",
@@ -306,6 +306,51 @@
           "triggered": false,
           "intensity": 0.07971014492753623,
           "summary": "round-trip wallets share=8% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+      "outcomeIndex": 0,
+      "score": 4.517241379310344,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.5747126436781609,
+          "summary": "wallet concentration top1=43% trades (42% notional), top3=57%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.034482758620689655,
+          "summary": "min-size trades share=3% over 87 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=1.96, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no rapid reversals"
         },
         {
           "name": "price_whips",
@@ -361,51 +406,6 @@
       ]
     },
     {
-      "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
-      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
-      "outcomeIndex": 0,
-      "score": 4.465909090909091,
-      "labelText": "normal",
-      "heuristics": [
-        {
-          "name": "wallet_concentration",
-          "triggered": false,
-          "intensity": 0.5681818181818182,
-          "summary": "wallet concentration top1=42% trades (42% notional), top3=57%"
-        },
-        {
-          "name": "min_size_spam",
-          "triggered": false,
-          "intensity": 0.03409090909090909,
-          "summary": "min-size trades share=3% over 88 trades"
-        },
-        {
-          "name": "timing_regular",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "timing CV=1.97, z-score=0.0"
-        },
-        {
-          "name": "ping_pong",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "no alternating sequences"
-        },
-        {
-          "name": "round_trips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "no rapid reversals"
-        },
-        {
-          "name": "price_whips",
-          "triggered": false,
-          "intensity": 0.0,
-          "summary": "price whips detected=0"
-        }
-      ]
-    },
-    {
       "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)",
       "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
       "outcomeIndex": 1,
@@ -455,10 +455,10 @@
   "analytics": {
     "marketOverview": {
       "totalTrades": 331,
-      "totalSize": 84650.77782200003,
-      "totalNotional": 29216.54549,
-      "averageSize": 255.74253118429013,
-      "averageNotional": 88.26750903323263,
+      "totalSize": 86397.84303400003,
+      "totalNotional": 30897.269355000004,
+      "averageSize": 261.0206738187312,
+      "averageNotional": 93.34522463746225,
       "walletCoverage": {
         "uniqueWallets": 164,
         "missingWallets": 0,
@@ -467,8 +467,8 @@
       "topWallets": {
         "tradesTop1": 0.22054380664652568,
         "tradesTop3": 0.30513595166163143,
-        "notionalTop1": 0.1605709848758716,
-        "notionalTop3": 0.3544371375987754
+        "notionalTop1": 0.1518363784869818,
+        "notionalTop3": 0.33806256934837176
       },
       "largestBySize": {
         "size": 8299.34,
@@ -491,7 +491,7 @@
         "outcomeIndex": 1,
         "tradeCount": 2,
         "notional": 0.37962,
-        "volumeShare": 1.2993322572305244e-05,
+        "volumeShare": 1.2286522657982634e-05,
         "vwap": 0.999,
         "lastPrice": 0.999,
         "score": 31.0,
@@ -541,7 +541,7 @@
         "outcomeIndex": 0,
         "tradeCount": 3,
         "notional": 3.8,
-        "volumeShare": 0.0001300632890120645,
+        "volumeShare": 0.00012298821479462095,
         "vwap": 0.001,
         "lastPrice": 0.001,
         "score": 25.0,
@@ -591,7 +591,7 @@
         "outcomeIndex": 0,
         "tradeCount": 2,
         "notional": 2.5,
-        "volumeShare": 8.556795329741086e-05,
+        "volumeShare": 8.091329920698746e-05,
         "vwap": 0.001,
         "lastPrice": 0.001,
         "score": 25.0,
@@ -639,31 +639,31 @@
         "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)",
         "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
         "outcomeIndex": 1,
-        "tradeCount": 48,
-        "notional": 6004.985157999998,
-        "volumeShare": 0.20553371582055568,
-        "vwap": 0.9376004682956335,
-        "lastPrice": 0.944,
-        "score": 5.28125,
+        "tradeCount": 49,
+        "notional": 7826.759027999998,
+        "volumeShare": 0.2533155580214217,
+        "vwap": 0.937327301962642,
+        "lastPrice": 0.9364280089439462,
+        "score": 5.173469387755103,
         "labelText": "normal",
         "heuristics": [
           {
             "name": "wallet_concentration",
             "triggered": false,
-            "intensity": 0.5208333333333334,
-            "summary": "wallet concentration top1=25% trades (30% notional), top3=52%"
+            "intensity": 0.5102040816326531,
+            "summary": "wallet concentration top1=24% trades (35% notional), top3=51%"
           },
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.16666666666666666,
-            "summary": "min-size trades share=17% over 48 trades"
+            "intensity": 0.16326530612244897,
+            "summary": "min-size trades share=16% over 49 trades"
           },
           {
             "name": "timing_regular",
             "triggered": false,
             "intensity": 0.0,
-            "summary": "timing CV=1.48, z-score=0.0"
+            "summary": "timing CV=1.47, z-score=0.0"
           },
           {
             "name": "ping_pong",
@@ -674,7 +674,7 @@
           {
             "name": "round_trips",
             "triggered": false,
-            "intensity": 0.125,
+            "intensity": 0.12244897959183673,
             "summary": "round-trip wallets share=12% of trades"
           },
           {
@@ -691,7 +691,7 @@
         "outcomeIndex": 1,
         "tradeCount": 33,
         "notional": 783.0411860000002,
-        "volumeShare": 0.02680129265343889,
+        "volumeShare": 0.025343378309684934,
         "vwap": 0.07564682190522369,
         "lastPrice": 0.074,
         "score": 4.863636363636363,
@@ -740,11 +740,11 @@
         "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
         "outcomeIndex": 0,
         "tradeCount": 138,
-        "notional": 17572.020446999988,
-        "volumeShare": 0.6014407299800175,
-        "vwap": 0.9253789364723127,
-        "lastPrice": 0.919,
-        "score": 4.684782608695652,
+        "notional": 17434.020441999986,
+        "volumeShare": 0.5642576449617123,
+        "vwap": 0.9253424277017042,
+        "lastPrice": 0.9289999976774919,
+        "score": 4.728260869565218,
         "labelText": "normal",
         "heuristics": [
           {
@@ -756,8 +756,8 @@
           {
             "name": "min_size_spam",
             "triggered": false,
-            "intensity": 0.34057971014492755,
-            "summary": "min-size trades share=34% over 138 trades"
+            "intensity": 0.34782608695652173,
+            "summary": "min-size trades share=35% over 138 trades"
           },
           {
             "name": "timing_regular",
@@ -786,12 +786,62 @@
         ]
       },
       {
+        "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+        "outcomeIndex": 0,
+        "tradeCount": 87,
+        "notional": 1411.3957289999996,
+        "volumeShare": 0.045680273968016466,
+        "vwap": 0.0652393705415633,
+        "lastPrice": 0.056,
+        "score": 4.517241379310344,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.5747126436781609,
+            "summary": "wallet concentration top1=43% trades (42% notional), top3=57%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.034482758620689655,
+            "summary": "min-size trades share=3% over 87 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=1.96, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no rapid reversals"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
         "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
         "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
         "outcomeIndex": 0,
         "tradeCount": 5,
         "notional": 17.5,
-        "volumeShare": 0.000598975673081876,
+        "volumeShare": 0.0005663930944489122,
         "vwap": 0.001,
         "lastPrice": 0.001,
         "score": 4.5,
@@ -836,62 +886,12 @@
         ]
       },
       {
-        "label": "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)",
-        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
-        "outcomeIndex": 0,
-        "tradeCount": 88,
-        "notional": 1414.4457289999996,
-        "volumeShare": 0.04841249043231769,
-        "vwap": 0.0652295952487095,
-        "lastPrice": 0.056,
-        "score": 4.465909090909091,
-        "labelText": "normal",
-        "heuristics": [
-          {
-            "name": "wallet_concentration",
-            "triggered": false,
-            "intensity": 0.5681818181818182,
-            "summary": "wallet concentration top1=42% trades (42% notional), top3=57%"
-          },
-          {
-            "name": "min_size_spam",
-            "triggered": false,
-            "intensity": 0.03409090909090909,
-            "summary": "min-size trades share=3% over 88 trades"
-          },
-          {
-            "name": "timing_regular",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "timing CV=1.97, z-score=0.0"
-          },
-          {
-            "name": "ping_pong",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "no alternating sequences"
-          },
-          {
-            "name": "round_trips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "no rapid reversals"
-          },
-          {
-            "name": "price_whips",
-            "triggered": false,
-            "intensity": 0.0,
-            "summary": "price whips detected=0"
-          }
-        ]
-      },
-      {
         "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)",
         "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
         "outcomeIndex": 1,
         "tradeCount": 12,
         "notional": 3417.8733499999994,
-        "volumeShare": 0.11698417087570606,
+        "volumeShare": 0.11062056360805542,
         "vwap": 0.9989750773079862,
         "lastPrice": 0.999,
         "score": 2.375,
@@ -938,24 +938,6 @@
     ],
     "timeseries": {
       "perMinute": [
-        {
-          "timestamp": 1765661520,
-          "iso": "2025-12-13T21:32:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.9299999954164285,
-          "outcomes": {
-            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9299999954164285
-          }
-        },
-        {
-          "timestamp": 1765661880,
-          "iso": "2025-12-13T21:38:00+00:00",
-          "tradeCount": 1,
-          "vwap": 0.061,
-          "outcomes": {
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.061
-          }
-        },
         {
           "timestamp": 1765662240,
           "iso": "2025-12-13T21:44:00+00:00",
@@ -1633,7 +1615,7 @@
           "vwap": 0.4937273333333333,
           "outcomes": {
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.925,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06245466666666667
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06245466666666666
           }
         },
         {
@@ -1656,7 +1638,7 @@
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9309999999999999,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.07661898551678557,
             "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9266702033656893,
-            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06755809758795255
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (Yes)": 0.06755809758795253
           }
         },
         {
@@ -2797,6 +2779,24 @@
           "vwap": 0.944,
           "outcomes": {
             "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.944
+          }
+        },
+        {
+          "timestamp": 1765747620,
+          "iso": "2025-12-14T21:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9364280089439462,
+          "outcomes": {
+            "Will Salvador Nasralla win the 2025 Honduras presidential election? (No)": 0.9364280089439462
+          }
+        },
+        {
+          "timestamp": 1765748160,
+          "iso": "2025-12-14T21:36:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9289999976774919,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.9289999976774919
           }
         }
       ]
