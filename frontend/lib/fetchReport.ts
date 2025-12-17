@@ -18,9 +18,10 @@ const reportsBranchUrl =
     ? `https://raw.githubusercontent.com/${repoOwner}/${repoSlug}/reports/docs/reports`
     : undefined);
 const REPORTS_BASE_URL = reportsBranchUrl;
+const IS_VERCEL = process.env.VERCEL === "1";
 const REQUIRE_REMOTE_REPORTS =
   process.env.FORCE_REMOTE_REPORTS === "1" ||
-  process.env.NODE_ENV === "production";
+  (process.env.NODE_ENV === "production" && IS_VERCEL);
 const EMPTY_REPORT_INDEX: ReportIndex = {
   generatedAt: new Date(0).toISOString(),
   reports: []
