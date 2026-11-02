@@ -4,70 +4,4654 @@
     "slug": "honduras-presidential-election",
     "id": 74717
   },
-  "score": 0.0,
+  "score": 1.4969199178644765,
   "label": "normal",
   "heuristics": [
     {
       "name": "wallet_concentration",
       "triggered": false,
-      "intensity": 0.0,
-      "summary": "insufficient trades"
+      "intensity": 0.053388090349075976,
+      "summary": "wallet concentration top1=2% trades (21% notional), top3=5%"
     },
     {
       "name": "min_size_spam",
       "triggered": false,
-      "intensity": 0.0,
-      "summary": "no trades"
+      "intensity": 0.055441478439425054,
+      "summary": "min-size trades share=6% over 487 trades"
     },
     {
       "name": "timing_regular",
       "triggered": false,
       "intensity": 0.0,
-      "summary": "not enough trades"
+      "summary": "timing CV=1.25, z-score=0.0"
     },
     {
       "name": "ping_pong",
       "triggered": false,
-      "intensity": 0.0,
-      "summary": "small sample"
+      "intensity": 0.004106776180698152,
+      "summary": "ping-pong wallets share=0% of trades"
     },
     {
       "name": "round_trips",
       "triggered": false,
-      "intensity": 0.0,
-      "summary": "small sample"
+      "intensity": 0.24845995893223818,
+      "summary": "round-trip wallets share=25% of trades"
     },
     {
       "name": "price_whips",
       "triggered": false,
       "intensity": 0.0,
-      "summary": "small sample"
+      "summary": "price whips detected=0"
     }
   ],
-  "outcomes": [],
-  "lookbackSeconds": 259200,
+  "outcomes": [
+    {
+      "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+      "outcomeIndex": 0,
+      "score": 25.0,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": true,
+          "intensity": 1.0,
+          "summary": "wallet concentration top1=100% trades (100% notional), top3=100%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 1 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
+      "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
+      "outcomeIndex": 0,
+      "score": 8.430769230769231,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.06153846153846154,
+          "summary": "wallet concentration top1=2% trades (2% notional), top3=6%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 130 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=2.35, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": true,
+          "intensity": 0.3230769230769231,
+          "summary": "round-trip wallets share=32% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
+      "outcomeIndex": 0,
+      "score": 8.25925925925926,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.0411522633744856,
+          "summary": "wallet concentration top1=2% trades (1% notional), top3=4%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 243 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=1.20, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": true,
+          "intensity": 0.3168724279835391,
+          "summary": "round-trip wallets share=32% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)",
+      "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
+      "outcomeIndex": 1,
+      "score": 7.714285714285713,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.5714285714285714,
+          "summary": "wallet concentration top1=29% trades (78% notional), top3=57%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.5714285714285714,
+          "summary": "min-size trades share=57% over 7 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
+      "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)",
+      "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
+      "outcomeIndex": 1,
+      "score": 7.124999999999999,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.75,
+          "summary": "wallet concentration top1=25% trades (42% notional), top3=75%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.25,
+          "summary": "min-size trades share=25% over 8 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
+      "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)",
+      "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
+      "outcomeIndex": 1,
+      "score": 5.454545454545453,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.5454545454545454,
+          "summary": "wallet concentration top1=18% trades (47% notional), top3=55%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "min-size trades share=0% over 11 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.18181818181818182,
+          "summary": "ping-pong wallets share=18% of trades"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.18181818181818182,
+          "summary": "round-trip wallets share=18% of trades"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
+      "label": "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)",
+      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+      "outcomeIndex": 1,
+      "score": 4.35,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.5,
+          "summary": "wallet concentration top1=20% trades (34% notional), top3=50%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.1,
+          "summary": "min-size trades share=10% over 10 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "not enough trades"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no rapid reversals"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "small sample"
+        }
+      ]
+    },
+    {
+      "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
+      "outcomeIndex": 0,
+      "score": 4.344827586206897,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.41379310344827586,
+          "summary": "wallet concentration top1=24% trades (29% notional), top3=41%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.20689655172413793,
+          "summary": "min-size trades share=21% over 29 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=1.62, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no rapid reversals"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)",
+      "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+      "outcomeIndex": 1,
+      "score": 3.9545454545454537,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.2727272727272727,
+          "summary": "wallet concentration top1=9% trades (37% notional), top3=27%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.3181818181818182,
+          "summary": "min-size trades share=32% over 22 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=1.00, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no rapid reversals"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    },
+    {
+      "label": "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)",
+      "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+      "outcomeIndex": 0,
+      "score": 3.057692307692308,
+      "labelText": "normal",
+      "heuristics": [
+        {
+          "name": "wallet_concentration",
+          "triggered": false,
+          "intensity": 0.19230769230769232,
+          "summary": "wallet concentration top1=8% trades (29% notional), top3=19%"
+        },
+        {
+          "name": "min_size_spam",
+          "triggered": false,
+          "intensity": 0.2692307692307692,
+          "summary": "min-size trades share=27% over 26 trades"
+        },
+        {
+          "name": "timing_regular",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "timing CV=1.16, z-score=0.0"
+        },
+        {
+          "name": "ping_pong",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no alternating sequences"
+        },
+        {
+          "name": "round_trips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "no rapid reversals"
+        },
+        {
+          "name": "price_whips",
+          "triggered": false,
+          "intensity": 0.0,
+          "summary": "price whips detected=0"
+        }
+      ]
+    }
+  ],
+  "lookbackSeconds": 86400,
   "analytics": {
     "marketOverview": {
-      "totalTrades": 0,
-      "totalSize": 0,
-      "totalNotional": 0,
-      "averageSize": 0.0,
-      "averageNotional": 0.0,
+      "totalTrades": 487,
+      "totalSize": 172174.502202,
+      "totalNotional": 8276.330447,
+      "averageSize": 353.54107228336755,
+      "averageNotional": 16.994518371663244,
       "walletCoverage": {
-        "uniqueWallets": 0,
+        "uniqueWallets": 354,
         "missingWallets": 0,
         "missingShare": 0.0
       },
       "topWallets": {
-        "tradesTop1": 0.0,
-        "tradesTop3": 0.0,
-        "notionalTop1": 0.0,
-        "notionalTop3": 0.0
+        "tradesTop1": 0.022587268993839837,
+        "tradesTop3": 0.053388090349075976,
+        "notionalTop1": 0.20965286380378376,
+        "notionalTop3": 0.40020718532337257
+      },
+      "largestBySize": {
+        "size": 1048.16,
+        "price": 0.004,
+        "wallet": "0xa500a4cf0d725a804e43aa67840ed855d6b163b8",
+        "timestamp": 1763711825
+      },
+      "largestByNotional": {
+        "notional": 999.9997350000001,
+        "size": 1002.7875,
+        "price": 0.9972199842937811,
+        "wallet": "0x766b26b9d857c84f468f911a3b70ebf2e994e4ff",
+        "timestamp": 1763712387
       }
     },
-    "outcomes": [],
+    "outcomes": [
+      {
+        "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+        "outcomeIndex": 0,
+        "tradeCount": 1,
+        "notional": 2.121,
+        "volumeShare": 0.00025627299605573614,
+        "vwap": 0.15,
+        "lastPrice": 0.15,
+        "score": 25.0,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": true,
+            "intensity": 1.0,
+            "summary": "wallet concentration top1=100% trades (100% notional), top3=100%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 1 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
+        "outcomeIndex": 0,
+        "tradeCount": 130,
+        "notional": 255.8702,
+        "volumeShare": 0.030915899460339662,
+        "vwap": 0.0038461228581739473,
+        "lastPrice": 0.004,
+        "score": 8.430769230769231,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.06153846153846154,
+            "summary": "wallet concentration top1=2% trades (2% notional), top3=6%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 130 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=2.35, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": true,
+            "intensity": 0.3230769230769231,
+            "summary": "round-trip wallets share=32% of trades"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
+        "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
+        "outcomeIndex": 0,
+        "tradeCount": 243,
+        "notional": 488.58174,
+        "volumeShare": 0.059033619202227584,
+        "vwap": 0.005192051337555779,
+        "lastPrice": 0.004,
+        "score": 8.25925925925926,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.0411522633744856,
+            "summary": "wallet concentration top1=2% trades (1% notional), top3=4%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 243 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=1.20, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": true,
+            "intensity": 0.3168724279835391,
+            "summary": "round-trip wallets share=32% of trades"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
+        "label": "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)",
+        "conditionId": "0x5ca4b979bc764b3e137c1e73d04f967324b0c3e37407df285227a8bb58320bce",
+        "outcomeIndex": 1,
+        "tradeCount": 7,
+        "notional": 641.102475,
+        "volumeShare": 0.07746216503865992,
+        "vwap": 0.9956055838122494,
+        "lastPrice": 0.9957876984126984,
+        "score": 7.714285714285713,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.5714285714285714,
+            "summary": "wallet concentration top1=29% trades (78% notional), top3=57%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.5714285714285714,
+            "summary": "min-size trades share=57% over 7 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)",
+        "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
+        "outcomeIndex": 1,
+        "tradeCount": 8,
+        "notional": 715.8577979999999,
+        "volumeShare": 0.08649458870500798,
+        "vwap": 0.595448241100075,
+        "lastPrice": 0.59,
+        "score": 7.124999999999999,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.75,
+            "summary": "wallet concentration top1=25% trades (42% notional), top3=75%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.25,
+            "summary": "min-size trades share=25% over 8 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)",
+        "conditionId": "0xdb7d5152831846ed495837d7b96ee5f224abcbad75ff786bc55970800862fc48",
+        "outcomeIndex": 1,
+        "tradeCount": 11,
+        "notional": 2150.281296,
+        "volumeShare": 0.2598109524226927,
+        "vwap": 0.9969215593754294,
+        "lastPrice": 0.9969828968253969,
+        "score": 5.454545454545453,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.5454545454545454,
+            "summary": "wallet concentration top1=18% trades (47% notional), top3=55%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "min-size trades share=0% over 11 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.18181818181818182,
+            "summary": "ping-pong wallets share=18% of trades"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.18181818181818182,
+            "summary": "round-trip wallets share=18% of trades"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)",
+        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+        "outcomeIndex": 1,
+        "tradeCount": 10,
+        "notional": 209.530195,
+        "volumeShare": 0.02531679907439539,
+        "vwap": 0.5641516390160911,
+        "lastPrice": 0.57,
+        "score": 4.35,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.5,
+            "summary": "wallet concentration top1=20% trades (34% notional), top3=50%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.1,
+            "summary": "min-size trades share=10% over 10 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "not enough trades"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no rapid reversals"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "small sample"
+          }
+        ]
+      },
+      {
+        "label": "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
+        "outcomeIndex": 0,
+        "tradeCount": 29,
+        "notional": 1064.509884,
+        "volumeShare": 0.12862099825724854,
+        "vwap": 0.39310140449861636,
+        "lastPrice": 0.41999999862360893,
+        "score": 4.344827586206897,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.41379310344827586,
+            "summary": "wallet concentration top1=24% trades (29% notional), top3=41%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.20689655172413793,
+            "summary": "min-size trades share=21% over 29 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=1.62, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no rapid reversals"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
+        "label": "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)",
+        "conditionId": "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+        "outcomeIndex": 1,
+        "tradeCount": 22,
+        "notional": 1547.354075,
+        "volumeShare": 0.18696136952348055,
+        "vwap": 0.8562415536705028,
+        "lastPrice": 0.86,
+        "score": 3.9545454545454537,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.2727272727272727,
+            "summary": "wallet concentration top1=9% trades (37% notional), top3=27%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.3181818181818182,
+            "summary": "min-size trades share=32% over 22 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=1.00, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no rapid reversals"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      },
+      {
+        "label": "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)",
+        "conditionId": "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863",
+        "outcomeIndex": 0,
+        "tradeCount": 26,
+        "notional": 1201.121784,
+        "volumeShare": 0.14512733531989191,
+        "vwap": 0.4546084016360795,
+        "lastPrice": 0.4490905273312986,
+        "score": 3.057692307692308,
+        "labelText": "normal",
+        "heuristics": [
+          {
+            "name": "wallet_concentration",
+            "triggered": false,
+            "intensity": 0.19230769230769232,
+            "summary": "wallet concentration top1=8% trades (29% notional), top3=19%"
+          },
+          {
+            "name": "min_size_spam",
+            "triggered": false,
+            "intensity": 0.2692307692307692,
+            "summary": "min-size trades share=27% over 26 trades"
+          },
+          {
+            "name": "timing_regular",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "timing CV=1.16, z-score=0.0"
+          },
+          {
+            "name": "ping_pong",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no alternating sequences"
+          },
+          {
+            "name": "round_trips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "no rapid reversals"
+          },
+          {
+            "name": "price_whips",
+            "triggered": false,
+            "intensity": 0.0,
+            "summary": "price whips detected=0"
+          }
+        ]
+      }
+    ],
     "timeseries": {
-      "perMinute": []
+      "perMinute": [
+        {
+          "timestamp": 1763664660,
+          "iso": "2025-11-20T18:51:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.43,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.43
+          }
+        },
+        {
+          "timestamp": 1763665860,
+          "iso": "2025-11-20T19:11:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.4444943562318054,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4299999870999978,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45999995951999545
+          }
+        },
+        {
+          "timestamp": 1763666400,
+          "iso": "2025-11-20T19:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8699999999999999,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8699999999999999
+          }
+        },
+        {
+          "timestamp": 1763669280,
+          "iso": "2025-11-20T20:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.002,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.002
+          }
+        },
+        {
+          "timestamp": 1763669520,
+          "iso": "2025-11-20T20:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4
+          }
+        },
+        {
+          "timestamp": 1763672340,
+          "iso": "2025-11-20T20:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.5400000000000001,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.5400000000000001
+          }
+        },
+        {
+          "timestamp": 1763672460,
+          "iso": "2025-11-20T21:01:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763672580,
+          "iso": "2025-11-20T21:03:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763672700,
+          "iso": "2025-11-20T21:05:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763672820,
+          "iso": "2025-11-20T21:07:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.45,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45
+          }
+        },
+        {
+          "timestamp": 1763672880,
+          "iso": "2025-11-20T21:08:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.41999998377173375,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.41999998377173375
+          }
+        },
+        {
+          "timestamp": 1763673000,
+          "iso": "2025-11-20T21:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763673180,
+          "iso": "2025-11-20T21:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763673420,
+          "iso": "2025-11-20T21:17:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763673600,
+          "iso": "2025-11-20T21:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763673840,
+          "iso": "2025-11-20T21:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763674020,
+          "iso": "2025-11-20T21:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763674260,
+          "iso": "2025-11-20T21:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763674560,
+          "iso": "2025-11-20T21:36:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763674860,
+          "iso": "2025-11-20T21:41:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763675040,
+          "iso": "2025-11-20T21:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.45999998895999966,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45999998895999966
+          }
+        },
+        {
+          "timestamp": 1763675100,
+          "iso": "2025-11-20T21:45:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763675340,
+          "iso": "2025-11-20T21:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763675580,
+          "iso": "2025-11-20T21:53:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763675820,
+          "iso": "2025-11-20T21:57:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.012643410852713179,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45
+          }
+        },
+        {
+          "timestamp": 1763676000,
+          "iso": "2025-11-20T22:00:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.45999999978106315,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45999999978106315
+          }
+        },
+        {
+          "timestamp": 1763676120,
+          "iso": "2025-11-20T22:02:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763676420,
+          "iso": "2025-11-20T22:07:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763676720,
+          "iso": "2025-11-20T22:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763676960,
+          "iso": "2025-11-20T22:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763677200,
+          "iso": "2025-11-20T22:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763677380,
+          "iso": "2025-11-20T22:23:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763677680,
+          "iso": "2025-11-20T22:28:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763677920,
+          "iso": "2025-11-20T22:32:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763678160,
+          "iso": "2025-11-20T22:36:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763678340,
+          "iso": "2025-11-20T22:39:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763678520,
+          "iso": "2025-11-20T22:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8700000000000001,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8700000000000001
+          }
+        },
+        {
+          "timestamp": 1763678640,
+          "iso": "2025-11-20T22:44:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.024552871734953716,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.869999998259999
+          }
+        },
+        {
+          "timestamp": 1763678820,
+          "iso": "2025-11-20T22:47:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763679060,
+          "iso": "2025-11-20T22:51:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763679300,
+          "iso": "2025-11-20T22:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763679540,
+          "iso": "2025-11-20T22:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763679840,
+          "iso": "2025-11-20T23:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763680140,
+          "iso": "2025-11-20T23:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763680320,
+          "iso": "2025-11-20T23:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763680500,
+          "iso": "2025-11-20T23:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763680860,
+          "iso": "2025-11-20T23:21:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763681100,
+          "iso": "2025-11-20T23:25:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763681340,
+          "iso": "2025-11-20T23:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763681580,
+          "iso": "2025-11-20T23:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763681880,
+          "iso": "2025-11-20T23:38:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763682120,
+          "iso": "2025-11-20T23:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763682360,
+          "iso": "2025-11-20T23:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763682660,
+          "iso": "2025-11-20T23:51:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763682960,
+          "iso": "2025-11-20T23:56:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763683020,
+          "iso": "2025-11-20T23:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004576046858719833,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004576046858719833
+          }
+        },
+        {
+          "timestamp": 1763683200,
+          "iso": "2025-11-21T00:00:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763683440,
+          "iso": "2025-11-21T00:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763684040,
+          "iso": "2025-11-21T00:14:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763684280,
+          "iso": "2025-11-21T00:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763684520,
+          "iso": "2025-11-21T00:22:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763684820,
+          "iso": "2025-11-21T00:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763685120,
+          "iso": "2025-11-21T00:32:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763685420,
+          "iso": "2025-11-21T00:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763685660,
+          "iso": "2025-11-21T00:41:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763685960,
+          "iso": "2025-11-21T00:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763686200,
+          "iso": "2025-11-21T00:50:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763686500,
+          "iso": "2025-11-21T00:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763686740,
+          "iso": "2025-11-21T00:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763687100,
+          "iso": "2025-11-21T01:05:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763687340,
+          "iso": "2025-11-21T01:09:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.01206208513851902,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.58
+          }
+        },
+        {
+          "timestamp": 1763687580,
+          "iso": "2025-11-21T01:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763687760,
+          "iso": "2025-11-21T01:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.5999999980654521,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.5999999980654521
+          }
+        },
+        {
+          "timestamp": 1763687880,
+          "iso": "2025-11-21T01:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763688240,
+          "iso": "2025-11-21T01:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763688540,
+          "iso": "2025-11-21T01:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763688660,
+          "iso": "2025-11-21T01:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763688780,
+          "iso": "2025-11-21T01:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763689080,
+          "iso": "2025-11-21T01:38:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.143457792066654,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.459999998252
+          }
+        },
+        {
+          "timestamp": 1763689320,
+          "iso": "2025-11-21T01:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763689560,
+          "iso": "2025-11-21T01:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763689800,
+          "iso": "2025-11-21T01:50:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.006995888862045314,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8699999912999827
+          }
+        },
+        {
+          "timestamp": 1763690100,
+          "iso": "2025-11-21T01:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763690280,
+          "iso": "2025-11-21T01:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.5999999994,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.5999999994
+          }
+        },
+        {
+          "timestamp": 1763690340,
+          "iso": "2025-11-21T01:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763690400,
+          "iso": "2025-11-21T02:00:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.00719640179910045,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.00719640179910045
+          }
+        },
+        {
+          "timestamp": 1763690520,
+          "iso": "2025-11-21T02:02:00+00:00",
+          "tradeCount": 6,
+          "vwap": 0.41482814178302896,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004889135254988914,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.995,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.6,
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.995,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.55,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.86
+          }
+        },
+        {
+          "timestamp": 1763690580,
+          "iso": "2025-11-21T02:03:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.6,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.6
+          }
+        },
+        {
+          "timestamp": 1763690640,
+          "iso": "2025-11-21T02:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.459999998252,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.459999998252
+          }
+        },
+        {
+          "timestamp": 1763690760,
+          "iso": "2025-11-21T02:06:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763691000,
+          "iso": "2025-11-21T02:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763691300,
+          "iso": "2025-11-21T02:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763691480,
+          "iso": "2025-11-21T02:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763691840,
+          "iso": "2025-11-21T02:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763692020,
+          "iso": "2025-11-21T02:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003251351351351351,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003251351351351351
+          }
+        },
+        {
+          "timestamp": 1763692080,
+          "iso": "2025-11-21T02:28:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.002,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.002
+          }
+        },
+        {
+          "timestamp": 1763692140,
+          "iso": "2025-11-21T02:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763692440,
+          "iso": "2025-11-21T02:34:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763692680,
+          "iso": "2025-11-21T02:38:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763692860,
+          "iso": "2025-11-21T02:41:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763693100,
+          "iso": "2025-11-21T02:45:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763693340,
+          "iso": "2025-11-21T02:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763693460,
+          "iso": "2025-11-21T02:51:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763693700,
+          "iso": "2025-11-21T02:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763693880,
+          "iso": "2025-11-21T02:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763694120,
+          "iso": "2025-11-21T03:02:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.014674502712477397,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.54
+          }
+        },
+        {
+          "timestamp": 1763694300,
+          "iso": "2025-11-21T03:05:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763694420,
+          "iso": "2025-11-21T03:07:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763694540,
+          "iso": "2025-11-21T03:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763694720,
+          "iso": "2025-11-21T03:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763695020,
+          "iso": "2025-11-21T03:17:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763695200,
+          "iso": "2025-11-21T03:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763695500,
+          "iso": "2025-11-21T03:25:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763695740,
+          "iso": "2025-11-21T03:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763695980,
+          "iso": "2025-11-21T03:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763696220,
+          "iso": "2025-11-21T03:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763696280,
+          "iso": "2025-11-21T03:38:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4
+          }
+        },
+        {
+          "timestamp": 1763696520,
+          "iso": "2025-11-21T03:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763696760,
+          "iso": "2025-11-21T03:46:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005417381974248926,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.006,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763696880,
+          "iso": "2025-11-21T03:48:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.006879765395894429,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.006000000000000001,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.008
+          }
+        },
+        {
+          "timestamp": 1763697060,
+          "iso": "2025-11-21T03:51:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.008,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.008
+          }
+        },
+        {
+          "timestamp": 1763697120,
+          "iso": "2025-11-21T03:52:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763697360,
+          "iso": "2025-11-21T03:56:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006000000000000001,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.006000000000000001
+          }
+        },
+        {
+          "timestamp": 1763697600,
+          "iso": "2025-11-21T04:00:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.0055,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.0055
+          }
+        },
+        {
+          "timestamp": 1763697900,
+          "iso": "2025-11-21T04:05:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.0055639097744360905,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763698140,
+          "iso": "2025-11-21T04:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763698260,
+          "iso": "2025-11-21T04:11:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763698380,
+          "iso": "2025-11-21T04:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763698440,
+          "iso": "2025-11-21T04:14:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.008,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.008
+          }
+        },
+        {
+          "timestamp": 1763698680,
+          "iso": "2025-11-21T04:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.008,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.008
+          }
+        },
+        {
+          "timestamp": 1763698740,
+          "iso": "2025-11-21T04:19:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763698920,
+          "iso": "2025-11-21T04:22:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763698980,
+          "iso": "2025-11-21T04:23:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763699100,
+          "iso": "2025-11-21T04:25:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8499999999999999,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8499999999999999
+          }
+        },
+        {
+          "timestamp": 1763699160,
+          "iso": "2025-11-21T04:26:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763699220,
+          "iso": "2025-11-21T04:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763699400,
+          "iso": "2025-11-21T04:30:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763699940,
+          "iso": "2025-11-21T04:39:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005666666666666667,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005666666666666667
+          }
+        },
+        {
+          "timestamp": 1763700000,
+          "iso": "2025-11-21T04:40:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763700120,
+          "iso": "2025-11-21T04:42:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.006273080748711457,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.00783108787452242
+          }
+        },
+        {
+          "timestamp": 1763700300,
+          "iso": "2025-11-21T04:45:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005700170645264124,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.00714352144210345
+          }
+        },
+        {
+          "timestamp": 1763700540,
+          "iso": "2025-11-21T04:49:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004653290078196787,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763700960,
+          "iso": "2025-11-21T04:56:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763701020,
+          "iso": "2025-11-21T04:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763701140,
+          "iso": "2025-11-21T04:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763701260,
+          "iso": "2025-11-21T05:01:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763701500,
+          "iso": "2025-11-21T05:05:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005468202343833997,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763701980,
+          "iso": "2025-11-21T05:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763702040,
+          "iso": "2025-11-21T05:14:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763702160,
+          "iso": "2025-11-21T05:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763702280,
+          "iso": "2025-11-21T05:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763702340,
+          "iso": "2025-11-21T05:19:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.07723104836655559,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.40999999343999965,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45999999263999963
+          }
+        },
+        {
+          "timestamp": 1763702940,
+          "iso": "2025-11-21T05:29:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763703180,
+          "iso": "2025-11-21T05:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763703240,
+          "iso": "2025-11-21T05:34:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763703420,
+          "iso": "2025-11-21T05:37:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.017568981210176762,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006,
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.9959999999999999
+          }
+        },
+        {
+          "timestamp": 1763703600,
+          "iso": "2025-11-21T05:40:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.07725029870096856,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.3942864953526517,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.44
+          }
+        },
+        {
+          "timestamp": 1763703720,
+          "iso": "2025-11-21T05:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763703960,
+          "iso": "2025-11-21T05:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763704080,
+          "iso": "2025-11-21T05:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763704260,
+          "iso": "2025-11-21T05:51:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004250223834516826,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763704500,
+          "iso": "2025-11-21T05:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763704560,
+          "iso": "2025-11-21T05:56:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.428,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.46
+          }
+        },
+        {
+          "timestamp": 1763704620,
+          "iso": "2025-11-21T05:57:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.042810666588047996,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.86
+          }
+        },
+        {
+          "timestamp": 1763704680,
+          "iso": "2025-11-21T05:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763704740,
+          "iso": "2025-11-21T05:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763705040,
+          "iso": "2025-11-21T06:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763705100,
+          "iso": "2025-11-21T06:05:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763705280,
+          "iso": "2025-11-21T06:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763705340,
+          "iso": "2025-11-21T06:09:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.009310059667120276,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.6
+          }
+        },
+        {
+          "timestamp": 1763705400,
+          "iso": "2025-11-21T06:10:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.5102019637582821,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.5599998755555063,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4599998466666016
+          }
+        },
+        {
+          "timestamp": 1763705520,
+          "iso": "2025-11-21T06:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763705580,
+          "iso": "2025-11-21T06:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763705700,
+          "iso": "2025-11-21T06:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763705760,
+          "iso": "2025-11-21T06:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763706000,
+          "iso": "2025-11-21T06:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763706120,
+          "iso": "2025-11-21T06:22:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763706240,
+          "iso": "2025-11-21T06:24:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.00432802069714515,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763706480,
+          "iso": "2025-11-21T06:28:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.013322285188515505,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.995
+          }
+        },
+        {
+          "timestamp": 1763706540,
+          "iso": "2025-11-21T06:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763706660,
+          "iso": "2025-11-21T06:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763706780,
+          "iso": "2025-11-21T06:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763706840,
+          "iso": "2025-11-21T06:34:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763707020,
+          "iso": "2025-11-21T06:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763707260,
+          "iso": "2025-11-21T06:41:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763707320,
+          "iso": "2025-11-21T06:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763707380,
+          "iso": "2025-11-21T06:43:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.43445269321971647,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.40896959111518527,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.46
+          }
+        },
+        {
+          "timestamp": 1763707440,
+          "iso": "2025-11-21T06:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.0060000000109090915,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.0060000000109090915
+          }
+        },
+        {
+          "timestamp": 1763707500,
+          "iso": "2025-11-21T06:45:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763707560,
+          "iso": "2025-11-21T06:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763707680,
+          "iso": "2025-11-21T06:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763707740,
+          "iso": "2025-11-21T06:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763707800,
+          "iso": "2025-11-21T06:50:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763707920,
+          "iso": "2025-11-21T06:52:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763708100,
+          "iso": "2025-11-21T06:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763708220,
+          "iso": "2025-11-21T06:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763708400,
+          "iso": "2025-11-21T07:00:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004632868953037271,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763708640,
+          "iso": "2025-11-21T07:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763708700,
+          "iso": "2025-11-21T07:05:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763708940,
+          "iso": "2025-11-21T07:09:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005265737906074541,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763709240,
+          "iso": "2025-11-21T07:14:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763709360,
+          "iso": "2025-11-21T07:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9939999994319929,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.9939999994319929
+          }
+        },
+        {
+          "timestamp": 1763709480,
+          "iso": "2025-11-21T07:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763709540,
+          "iso": "2025-11-21T07:19:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763709780,
+          "iso": "2025-11-21T07:23:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763709840,
+          "iso": "2025-11-21T07:24:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.9949985447869791,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.9949985447869791
+          }
+        },
+        {
+          "timestamp": 1763710020,
+          "iso": "2025-11-21T07:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763710080,
+          "iso": "2025-11-21T07:28:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.013963668886089579,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8599999827999946
+          }
+        },
+        {
+          "timestamp": 1763710320,
+          "iso": "2025-11-21T07:32:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763710380,
+          "iso": "2025-11-21T07:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763710620,
+          "iso": "2025-11-21T07:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763710680,
+          "iso": "2025-11-21T07:38:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763710980,
+          "iso": "2025-11-21T07:43:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763711280,
+          "iso": "2025-11-21T07:48:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.01503886434704919,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.56
+          }
+        },
+        {
+          "timestamp": 1763711340,
+          "iso": "2025-11-21T07:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763711580,
+          "iso": "2025-11-21T07:53:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763711820,
+          "iso": "2025-11-21T07:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763711880,
+          "iso": "2025-11-21T07:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763712240,
+          "iso": "2025-11-21T08:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763712360,
+          "iso": "2025-11-21T08:06:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9972199842937811,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.9972199842937811
+          }
+        },
+        {
+          "timestamp": 1763712660,
+          "iso": "2025-11-21T08:11:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763712960,
+          "iso": "2025-11-21T08:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763713320,
+          "iso": "2025-11-21T08:22:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763713800,
+          "iso": "2025-11-21T08:30:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763714640,
+          "iso": "2025-11-21T08:44:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.006016006306227429,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.409999902475704
+          }
+        },
+        {
+          "timestamp": 1763714700,
+          "iso": "2025-11-21T08:45:00+00:00",
+          "tradeCount": 5,
+          "vwap": 0.6349405401315691,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4099999946251499,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.85
+          }
+        },
+        {
+          "timestamp": 1763714760,
+          "iso": "2025-11-21T08:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.5599999775999964,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.5599999775999964
+          }
+        },
+        {
+          "timestamp": 1763714820,
+          "iso": "2025-11-21T08:47:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.40999996924999715,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.40999996924999715
+          }
+        },
+        {
+          "timestamp": 1763714880,
+          "iso": "2025-11-21T08:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.994,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.994
+          }
+        },
+        {
+          "timestamp": 1763714940,
+          "iso": "2025-11-21T08:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763715180,
+          "iso": "2025-11-21T08:53:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.5599999775999964,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.5599999775999964
+          }
+        },
+        {
+          "timestamp": 1763715360,
+          "iso": "2025-11-21T08:56:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004469913904188384,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4159238259706424
+          }
+        },
+        {
+          "timestamp": 1763715420,
+          "iso": "2025-11-21T08:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4499997974998886,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4499997974998886
+          }
+        },
+        {
+          "timestamp": 1763715720,
+          "iso": "2025-11-21T09:02:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763715840,
+          "iso": "2025-11-21T09:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763716080,
+          "iso": "2025-11-21T09:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763716140,
+          "iso": "2025-11-21T09:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763716320,
+          "iso": "2025-11-21T09:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8599999998230574,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8599999998230574
+          }
+        },
+        {
+          "timestamp": 1763716500,
+          "iso": "2025-11-21T09:15:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.0043787731256085686,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763716560,
+          "iso": "2025-11-21T09:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8418732489899438,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8418732489899438
+          }
+        },
+        {
+          "timestamp": 1763717100,
+          "iso": "2025-11-21T09:25:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763717400,
+          "iso": "2025-11-21T09:30:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4499999549999955,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4499999549999955
+          }
+        },
+        {
+          "timestamp": 1763717520,
+          "iso": "2025-11-21T09:32:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763717880,
+          "iso": "2025-11-21T09:38:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763718120,
+          "iso": "2025-11-21T09:42:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.013343088578397423,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8599999827999946
+          }
+        },
+        {
+          "timestamp": 1763718240,
+          "iso": "2025-11-21T09:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763718480,
+          "iso": "2025-11-21T09:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763718660,
+          "iso": "2025-11-21T09:51:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763719200,
+          "iso": "2025-11-21T10:00:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763719800,
+          "iso": "2025-11-21T10:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763719980,
+          "iso": "2025-11-21T10:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763720100,
+          "iso": "2025-11-21T10:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763720580,
+          "iso": "2025-11-21T10:23:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763720640,
+          "iso": "2025-11-21T10:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763720820,
+          "iso": "2025-11-21T10:27:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4499997974998886,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4499997974998886
+          }
+        },
+        {
+          "timestamp": 1763720940,
+          "iso": "2025-11-21T10:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763721000,
+          "iso": "2025-11-21T10:30:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763721360,
+          "iso": "2025-11-21T10:36:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.3834689522600215,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.3834689522600215
+          }
+        },
+        {
+          "timestamp": 1763721420,
+          "iso": "2025-11-21T10:37:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.006049448594806119,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763721540,
+          "iso": "2025-11-21T10:39:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.4312986606831791,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4099999630999941,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4499999549999955
+          }
+        },
+        {
+          "timestamp": 1763721720,
+          "iso": "2025-11-21T10:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.409999901806705,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.409999901806705
+          }
+        },
+        {
+          "timestamp": 1763722560,
+          "iso": "2025-11-21T10:56:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.37248048484848484,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.37248048484848484
+          }
+        },
+        {
+          "timestamp": 1763722860,
+          "iso": "2025-11-21T11:01:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.45,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.45
+          }
+        },
+        {
+          "timestamp": 1763723040,
+          "iso": "2025-11-21T11:04:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763723100,
+          "iso": "2025-11-21T11:05:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.017841856469849104,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.36999996743999636
+          }
+        },
+        {
+          "timestamp": 1763723460,
+          "iso": "2025-11-21T11:11:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763723580,
+          "iso": "2025-11-21T11:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763723760,
+          "iso": "2025-11-21T11:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763723940,
+          "iso": "2025-11-21T11:19:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763724240,
+          "iso": "2025-11-21T11:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763724600,
+          "iso": "2025-11-21T11:30:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763724660,
+          "iso": "2025-11-21T11:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004439928773436682,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004439928773436682
+          }
+        },
+        {
+          "timestamp": 1763724900,
+          "iso": "2025-11-21T11:35:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.382319904205829,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.382319904205829
+          }
+        },
+        {
+          "timestamp": 1763724960,
+          "iso": "2025-11-21T11:36:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763725380,
+          "iso": "2025-11-21T11:43:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763725500,
+          "iso": "2025-11-21T11:45:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8599999975428563,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8599999975428563
+          }
+        },
+        {
+          "timestamp": 1763725560,
+          "iso": "2025-11-21T11:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.86,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.86
+          }
+        },
+        {
+          "timestamp": 1763725680,
+          "iso": "2025-11-21T11:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763725980,
+          "iso": "2025-11-21T11:53:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763726220,
+          "iso": "2025-11-21T11:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.8599999993194856,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8599999993194856
+          }
+        },
+        {
+          "timestamp": 1763726400,
+          "iso": "2025-11-21T12:00:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763727420,
+          "iso": "2025-11-21T12:17:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.9970000000000001,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.9970000000000001
+          }
+        },
+        {
+          "timestamp": 1763727600,
+          "iso": "2025-11-21T12:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003988700564971751,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.003988700564971751
+          }
+        },
+        {
+          "timestamp": 1763727780,
+          "iso": "2025-11-21T12:23:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763727960,
+          "iso": "2025-11-21T12:26:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.002,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.002
+          }
+        },
+        {
+          "timestamp": 1763728080,
+          "iso": "2025-11-21T12:28:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.996,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.996
+          }
+        },
+        {
+          "timestamp": 1763728380,
+          "iso": "2025-11-21T12:33:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763728680,
+          "iso": "2025-11-21T12:38:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.011075933589270578,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (Yes)": 0.15,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763728800,
+          "iso": "2025-11-21T12:40:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.05580154522042115,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.996
+          }
+        },
+        {
+          "timestamp": 1763728920,
+          "iso": "2025-11-21T12:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763729040,
+          "iso": "2025-11-21T12:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.44999999920588235,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.44999999920588235
+          }
+        },
+        {
+          "timestamp": 1763729160,
+          "iso": "2025-11-21T12:46:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763729520,
+          "iso": "2025-11-21T12:52:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763729940,
+          "iso": "2025-11-21T12:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763730240,
+          "iso": "2025-11-21T13:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763730600,
+          "iso": "2025-11-21T13:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763731020,
+          "iso": "2025-11-21T13:17:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763731320,
+          "iso": "2025-11-21T13:22:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005000000000000001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005000000000000001
+          }
+        },
+        {
+          "timestamp": 1763731800,
+          "iso": "2025-11-21T13:30:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.5695995668090476,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.5695995668090476
+          }
+        },
+        {
+          "timestamp": 1763731860,
+          "iso": "2025-11-21T13:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.002038992,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.002038992
+          }
+        },
+        {
+          "timestamp": 1763731920,
+          "iso": "2025-11-21T13:32:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763732340,
+          "iso": "2025-11-21T13:39:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763732400,
+          "iso": "2025-11-21T13:40:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4
+          }
+        },
+        {
+          "timestamp": 1763732700,
+          "iso": "2025-11-21T13:45:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005000000000000001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005000000000000001
+          }
+        },
+        {
+          "timestamp": 1763733000,
+          "iso": "2025-11-21T13:50:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005000000000000001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005000000000000001
+          }
+        },
+        {
+          "timestamp": 1763733060,
+          "iso": "2025-11-21T13:51:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763733480,
+          "iso": "2025-11-21T13:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007000000000000001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007000000000000001
+          }
+        },
+        {
+          "timestamp": 1763733780,
+          "iso": "2025-11-21T14:03:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763733840,
+          "iso": "2025-11-21T14:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763734020,
+          "iso": "2025-11-21T14:07:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.84,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.84
+          }
+        },
+        {
+          "timestamp": 1763734080,
+          "iso": "2025-11-21T14:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763734320,
+          "iso": "2025-11-21T14:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.579999996071713,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.579999996071713
+          }
+        },
+        {
+          "timestamp": 1763734380,
+          "iso": "2025-11-21T14:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763734500,
+          "iso": "2025-11-21T14:15:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.42477875185214164,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4499999828571419
+          }
+        },
+        {
+          "timestamp": 1763734620,
+          "iso": "2025-11-21T14:17:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.10426388401575706,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.44999999549999997
+          }
+        },
+        {
+          "timestamp": 1763735160,
+          "iso": "2025-11-21T14:26:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763735340,
+          "iso": "2025-11-21T14:29:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.9970000012475034,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.9970000012475034
+          }
+        },
+        {
+          "timestamp": 1763735820,
+          "iso": "2025-11-21T14:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763736240,
+          "iso": "2025-11-21T14:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763736480,
+          "iso": "2025-11-21T14:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763736540,
+          "iso": "2025-11-21T14:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763736600,
+          "iso": "2025-11-21T14:50:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.4,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4
+          }
+        },
+        {
+          "timestamp": 1763736780,
+          "iso": "2025-11-21T14:53:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763737080,
+          "iso": "2025-11-21T14:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007000000000000001,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007000000000000001
+          }
+        },
+        {
+          "timestamp": 1763737380,
+          "iso": "2025-11-21T15:03:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763737680,
+          "iso": "2025-11-21T15:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763737740,
+          "iso": "2025-11-21T15:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.40999999712999996,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.40999999712999996
+          }
+        },
+        {
+          "timestamp": 1763737980,
+          "iso": "2025-11-21T15:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763738100,
+          "iso": "2025-11-21T15:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.41,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.41
+          }
+        },
+        {
+          "timestamp": 1763738280,
+          "iso": "2025-11-21T15:18:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763738700,
+          "iso": "2025-11-21T15:25:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763738940,
+          "iso": "2025-11-21T15:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763739240,
+          "iso": "2025-11-21T15:34:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763739300,
+          "iso": "2025-11-21T15:35:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763739480,
+          "iso": "2025-11-21T15:38:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763739540,
+          "iso": "2025-11-21T15:39:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763739840,
+          "iso": "2025-11-21T15:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763740080,
+          "iso": "2025-11-21T15:48:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763740260,
+          "iso": "2025-11-21T15:51:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763740440,
+          "iso": "2025-11-21T15:54:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763740560,
+          "iso": "2025-11-21T15:56:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763740740,
+          "iso": "2025-11-21T15:59:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763740860,
+          "iso": "2025-11-21T16:01:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004999999999999999,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004999999999999999
+          }
+        },
+        {
+          "timestamp": 1763740920,
+          "iso": "2025-11-21T16:02:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763741040,
+          "iso": "2025-11-21T16:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763741160,
+          "iso": "2025-11-21T16:06:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763741580,
+          "iso": "2025-11-21T16:13:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763741820,
+          "iso": "2025-11-21T16:17:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.003841288302879442,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763742060,
+          "iso": "2025-11-21T16:21:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763742180,
+          "iso": "2025-11-21T16:23:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763742480,
+          "iso": "2025-11-21T16:28:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763742780,
+          "iso": "2025-11-21T16:33:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.004999999999999999,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004999999999999999
+          }
+        },
+        {
+          "timestamp": 1763743020,
+          "iso": "2025-11-21T16:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763743380,
+          "iso": "2025-11-21T16:43:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763743740,
+          "iso": "2025-11-21T16:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763743860,
+          "iso": "2025-11-21T16:51:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763744100,
+          "iso": "2025-11-21T16:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.003,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003
+          }
+        },
+        {
+          "timestamp": 1763744160,
+          "iso": "2025-11-21T16:56:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.07587105731285837,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.4199999956727271
+          }
+        },
+        {
+          "timestamp": 1763744280,
+          "iso": "2025-11-21T16:58:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763744460,
+          "iso": "2025-11-21T17:01:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.85,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.85
+          }
+        },
+        {
+          "timestamp": 1763744520,
+          "iso": "2025-11-21T17:02:00+00:00",
+          "tradeCount": 3,
+          "vwap": 0.003841288302879442,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763744760,
+          "iso": "2025-11-21T17:06:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.0042619324543191625,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.003,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763744940,
+          "iso": "2025-11-21T17:09:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004775603515615106,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004775603515615106
+          }
+        },
+        {
+          "timestamp": 1763745000,
+          "iso": "2025-11-21T17:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763745060,
+          "iso": "2025-11-21T17:11:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763745120,
+          "iso": "2025-11-21T17:12:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.41999999862360893,
+          "outcomes": {
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (Yes)": 0.41999999862360893
+          }
+        },
+        {
+          "timestamp": 1763745300,
+          "iso": "2025-11-21T17:15:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763745600,
+          "iso": "2025-11-21T17:20:00+00:00",
+          "tradeCount": 6,
+          "vwap": 0.6673333333333333,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004,
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.995,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.59,
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.995,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (No)": 0.57,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.85
+          }
+        },
+        {
+          "timestamp": 1763745660,
+          "iso": "2025-11-21T17:21:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763745900,
+          "iso": "2025-11-21T17:25:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763746140,
+          "iso": "2025-11-21T17:29:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763746380,
+          "iso": "2025-11-21T17:33:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.03534342107363476,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.8599999827999946
+          }
+        },
+        {
+          "timestamp": 1763746500,
+          "iso": "2025-11-21T17:35:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763746620,
+          "iso": "2025-11-21T17:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763747040,
+          "iso": "2025-11-21T17:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.43,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.43
+          }
+        },
+        {
+          "timestamp": 1763747220,
+          "iso": "2025-11-21T17:47:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763747340,
+          "iso": "2025-11-21T17:49:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763747400,
+          "iso": "2025-11-21T17:50:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763747700,
+          "iso": "2025-11-21T17:55:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763747820,
+          "iso": "2025-11-21T17:57:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.0034193704768170643,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.0034193704768170643
+          }
+        },
+        {
+          "timestamp": 1763747880,
+          "iso": "2025-11-21T17:58:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.0030000000000000005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.0030000000000000005
+          }
+        },
+        {
+          "timestamp": 1763748240,
+          "iso": "2025-11-21T18:04:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763748480,
+          "iso": "2025-11-21T18:08:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763748600,
+          "iso": "2025-11-21T18:10:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.84,
+          "outcomes": {
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.84
+          }
+        },
+        {
+          "timestamp": 1763748960,
+          "iso": "2025-11-21T18:16:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.006,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.006
+          }
+        },
+        {
+          "timestamp": 1763749200,
+          "iso": "2025-11-21T18:20:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763749320,
+          "iso": "2025-11-21T18:22:00+00:00",
+          "tradeCount": 2,
+          "vwap": 0.4366692959852711,
+          "outcomes": {
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4366692959852711
+          }
+        },
+        {
+          "timestamp": 1763749380,
+          "iso": "2025-11-21T18:23:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.005,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.005
+          }
+        },
+        {
+          "timestamp": 1763749440,
+          "iso": "2025-11-21T18:24:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.007,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.007
+          }
+        },
+        {
+          "timestamp": 1763749560,
+          "iso": "2025-11-21T18:26:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763749860,
+          "iso": "2025-11-21T18:31:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763749920,
+          "iso": "2025-11-21T18:32:00+00:00",
+          "tradeCount": 5,
+          "vwap": 0.7459367254478594,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (No)": 0.9957876984126984,
+            "Will Rixi Ramona Moncada Godoy win the 2025 Honduras presidential election? (No)": 0.59,
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (No)": 0.9969828968253969,
+            "Will Nasry Juan Asfura Zablah win the 2025 Honduras presidential election? (No)": 0.86,
+            "Will Salvador Alejandro C\u00e9sar Nasralla Salum win the 2025 Honduras presidential election? (Yes)": 0.4490905273312986
+          }
+        },
+        {
+          "timestamp": 1763750220,
+          "iso": "2025-11-21T18:37:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763750520,
+          "iso": "2025-11-21T18:42:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Jorge Nelson \u00c1vila Guti\u00e9rrez win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        },
+        {
+          "timestamp": 1763750640,
+          "iso": "2025-11-21T18:44:00+00:00",
+          "tradeCount": 1,
+          "vwap": 0.004,
+          "outcomes": {
+            "Will Mario Rivera Callejas win the 2025 Honduras presidential election? (Yes)": 0.004
+          }
+        }
+      ]
     }
   }
 }
